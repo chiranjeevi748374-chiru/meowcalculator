@@ -5,8 +5,32 @@ const TITLES = {
   'gst-calculator':'GST Calculator — Add or Remove GST Online | MeowCalculator',
   'sip-calculator':'SIP Calculator — Estimate Mutual Fund Returns | MeowCalculator',
   'fd-calculator':'FD Calculator — Fixed Deposit Maturity Value | MeowCalculator',
+  'ppf-calculator':'PPF Calculator — Public Provident Fund Maturity Value | MeowCalculator',
+  'rd-calculator':'RD Calculator — Recurring Deposit Maturity Value | MeowCalculator',
+  'lumpsum-calculator':'Lumpsum Calculator — Mutual Fund Lumpsum Returns | MeowCalculator',
+  'car-loan-calculator':'Car Loan EMI Calculator — Auto Loan Instalment | MeowCalculator',
+  'home-loan-calculator':'Home Loan EMI Calculator — Housing Loan Instalment | MeowCalculator',
+  'gold-loan-calculator':'Gold Loan Calculator — EMI & Interest-Only Payment | MeowCalculator',
+  'education-loan-calculator':'Education Loan EMI Calculator — With Moratorium | MeowCalculator',
+  'personal-loan-calculator':'Personal Loan EMI Calculator | MeowCalculator',
+  'salary-calculator':'Salary Calculator — CTC to In-Hand Take-Home Pay | MeowCalculator',
+  'hra-calculator':'HRA Calculator — House Rent Allowance Exemption | MeowCalculator',
+  'income-tax-calculator':'Income Tax Calculator — Old vs New Regime (India) | MeowCalculator',
+  'gratuity-calculator':'Gratuity Calculator — Payment of Gratuity Act | MeowCalculator',
+  'nps-calculator':'NPS Calculator — National Pension System Corpus | MeowCalculator',
+  'inflation-calculator':'Inflation Calculator — Future Value of Money | MeowCalculator',
+  'retirement-calculator':'Retirement Calculator — Corpus & SIP Needed | MeowCalculator',
+  'mf-returns-calculator':'Mutual Fund Returns Calculator — Absolute Return & CAGR | MeowCalculator',
+  'currency-calculator':'Currency Converter — Live Exchange Rates | MeowCalculator',
+  'age-calculator':'Age Calculator — Exact Age in Years, Months, Days | MeowCalculator',
+  'percentage-calculator':'Percentage Calculator — Percent, Increase & Decrease | MeowCalculator',
   'about':'About MeowCalculator — Free Indian Financial Calculators',
-  'contact':'Contact MeowCalculator'
+  'contact':'Contact MeowCalculator',
+  'privacy-policy':'Privacy Policy | MeowCalculator',
+  'terms-conditions':'Terms & Conditions | MeowCalculator',
+  'disclaimer':'Disclaimer | MeowCalculator',
+  'sitemap':'Sitemap | MeowCalculator',
+  'not-found':'Page Not Found (404) | MeowCalculator'
 };
 const DESCRIPTIONS = {
   'home':'20+ free Indian financial calculators — EMI, GST, SIP, FD, income tax, HRA, PPF and more. Instant results, formulas, real examples and PDF downloads.',
@@ -14,8 +38,32 @@ const DESCRIPTIONS = {
   'gst-calculator':'Add or remove GST from any amount in seconds. Supports all Indian GST slabs — 3%, 5%, 12%, 18% and 28% — with instant results.',
   'sip-calculator':'Estimate the future value of your monthly, quarterly or yearly SIP mutual fund investments with a compound-growth chart.',
   'fd-calculator':'Calculate the maturity value and interest earned on a fixed deposit, with monthly, quarterly, half-yearly or yearly compounding.',
+  'ppf-calculator':'Estimate your PPF maturity value over the 15-year lock-in based on your yearly contribution and the current interest rate.',
+  'rd-calculator':'Calculate the maturity value of a recurring deposit based on your monthly instalment, interest rate and tenure.',
+  'lumpsum-calculator':'Project the future value of a one-time mutual fund or investment lumpsum based on an expected annual return.',
+  'car-loan-calculator':'Work out your monthly car loan EMI, total interest and total payment for any car loan amount, rate and tenure.',
+  'home-loan-calculator':'Work out your monthly home loan EMI, total interest and total payment for any housing loan amount, rate and tenure.',
+  'gold-loan-calculator':'Calculate your gold loan EMI, or estimate an interest-only monthly payment with principal due at the end of tenure.',
+  'education-loan-calculator':'Estimate your education loan EMI, accounting for the moratorium period during your course and any grace period.',
+  'personal-loan-calculator':'Work out your personal loan EMI, total interest and total repayment amount instantly.',
+  'salary-calculator':'Convert your CTC into estimated monthly and annual in-hand salary, accounting for PF, gratuity and other deductions.',
+  'hra-calculator':'Calculate your HRA tax exemption under Indian income tax rules based on your basic salary, HRA received, rent paid and city type.',
+  'income-tax-calculator':'Estimate your income tax liability for FY 2025-26 under both the old and new tax regimes and compare which saves more.',
+  'gratuity-calculator':'Calculate your gratuity amount under the Payment of Gratuity Act, 1972 based on your last drawn salary and years of service.',
+  'nps-calculator':'Project your National Pension System (NPS) corpus at retirement, along with an estimated lumpsum withdrawal and monthly pension.',
+  'inflation-calculator':'See how inflation erodes the purchasing power of money over time, and what a given amount will be worth in the future.',
+  'retirement-calculator':'Estimate the retirement corpus you will need and the monthly SIP required to reach it, based on your current age and expenses.',
+  'mf-returns-calculator':'Calculate the absolute return and CAGR (compound annual growth rate) of any mutual fund or investment.',
+  'currency-calculator':'Convert between Indian Rupees and major world currencies using live, up-to-date exchange rates.',
+  'age-calculator':'Calculate your exact age in years, months and days from your date of birth, plus a countdown to your next birthday.',
+  'percentage-calculator':'Quickly calculate percentages, percentage increase or percentage decrease between two numbers.',
   'about':'Learn about MeowCalculator — a free set of Indian financial calculators built for students, salaried employees, business owners and investors.',
-  'contact':'Get in touch with the MeowCalculator team for feedback, feature requests or support.'
+  'contact':'Get in touch with the MeowCalculator team for feedback, feature requests or support — via form, email or phone.',
+  'privacy-policy':'Read the MeowCalculator Privacy Policy — how we handle cookies, analytics, advertising and any information you share with us.',
+  'terms-conditions':'Read the Terms & Conditions for using MeowCalculator, including important notes on calculator accuracy and liability.',
+  'disclaimer':'MeowCalculator calculators provide educational estimates only. Read our full disclaimer before making financial decisions.',
+  'sitemap':'A complete list of every calculator and page available on MeowCalculator.',
+  'not-found':'The page you were looking for could not be found on MeowCalculator.'
 };
 function pageMeta(target){
   const el = document.getElementById(target);
@@ -33,7 +81,7 @@ function updateSchema(target){
       "name": (TITLES[target]||'').split(' — ')[0],
       "applicationCategory":"FinanceApplication",
       "operatingSystem":"Any",
-      "url": location.href.split('#')[0] + '#' + target,
+      "url": 'https://www.meowcalculator.com/' + target,
       "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}
     });
   }
@@ -50,23 +98,64 @@ function updateSchema(target){
   const el = document.getElementById('pageSchema');
   if(el) el.textContent = JSON.stringify(schemas.length===1 ? schemas[0] : schemas);
 }
+/* ---------------- CLEAN URL ROUTING ----------------
+   Every page's full content already lives in the HTML on first load (no lazy
+   fetching), so search engines and link-preview bots see complete markup
+   even before JavaScript runs. On top of that, this router uses the History
+   API so URLs look like /emi-calculator instead of /#emi-calculator — the
+   old hash links (#emi-calculator) still work and are transparently
+   upgraded to the clean URL, so no bookmark or external link breaks.
+   Direct loads of a clean URL (e.g. someone opens meowcalculator.com/emi-calculator
+   straight from Google) are handled by the SPA-fallback rules shipped in
+   _redirects / vercel.json / .htaccess, which serve index.html for any
+   unknown path so this router can take over. */
+function currentTarget(){
+  let path = location.pathname.replace(/^\/|\/$/g, '');
+  if(!path && location.hash) path = location.hash.slice(1); // legacy #hash visit
+  if(!path) path = 'home';
+  return document.getElementById(path) ? path : null;
+}
 function route(){
-  const id = (location.hash || '#home').slice(1);
-  const target = document.getElementById(id) ? id : 'home';
+  const requested = currentTarget();
+  const target = requested || 'not-found';
   document.querySelectorAll('.page').forEach(p=>p.classList.add('hidden'));
   document.getElementById(target).classList.remove('hidden');
+
+  // Upgrade legacy hash URLs (or the bare "/") to a clean, bookmarkable path.
+  const cleanPath = target === 'home' ? '/' : '/' + target;
+  if(location.pathname !== cleanPath || location.hash){
+    history.replaceState({route: target}, '', cleanPath);
+  }
+
   const meta = pageMeta(target);
   document.title = meta.title;
   const metaDesc = document.querySelector('meta[name="description"]');
   if(metaDesc) metaDesc.setAttribute('content', meta.desc);
   const canonical = document.getElementById('canonicalLink');
-  if(canonical) canonical.setAttribute('href', 'https://www.meowcalculator.com/#' + target);
+  if(canonical) canonical.setAttribute('href', 'https://www.meowcalculator.com' + cleanPath);
+  let robotsMeta = document.querySelector('meta[name="robots"]');
+  if(robotsMeta) robotsMeta.setAttribute('content', target === 'not-found' ? 'noindex, follow' : 'index, follow');
   updateSchema(target);
   document.querySelectorAll('[data-route]').forEach(a=>a.classList.toggle('active', a.dataset.route===target));
   document.getElementById('navLinks').classList.remove('open');
   document.getElementById('navSearchResults').classList.remove('open');
   window.scrollTo(0,0);
 }
+// Intercept clicks on any in-site [data-route] link and navigate via the
+// History API instead of a full page reload or a hash jump.
+document.addEventListener('click', (e)=>{
+  const link = e.target.closest && e.target.closest('[data-route]');
+  if(!link) return;
+  if(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; // let "open in new tab" etc. work normally
+  e.preventDefault();
+  const target = link.dataset.route;
+  const cleanPath = target === 'home' ? '/' : '/' + target;
+  if(location.pathname !== cleanPath){
+    history.pushState({route: target}, '', cleanPath);
+  }
+  route();
+});
+window.addEventListener('popstate', route);
 window.addEventListener('hashchange', route);
 document.getElementById('burger').addEventListener('click', ()=>document.getElementById('navLinks').classList.toggle('open'));
 
@@ -1397,6 +1486,117 @@ Object.entries(NEW_FAQS).forEach(([id, items])=>{
     item.querySelector('.faq-q').addEventListener('click', ()=>item.classList.toggle('open'));
     el.appendChild(item);
   });
+});
+
+/* ---------------- ADVANTAGES & TIPS (expanded original content) ---------------- */
+const ADV_TIPS = {
+  emi: {
+    adv: ["Instantly compare how tenure and interest rate each change your monthly outgo, without opening a spreadsheet.", "See total interest paid over the loan, which is often more revealing than the EMI figure alone.", "Works for any lender or loan type — banks, NBFCs or informal lenders — since it uses the standard reducing-balance EMI formula.", "No sign-up or personal loan-application data required, unlike most bank EMI calculators."],
+    tips: ["A slightly shorter tenure often costs only a little more per month but saves a large amount in total interest — try a few tenures before deciding.", "Round up your EMI payment or make an annual part-prepayment to cut years off a long loan.", "Compare EMIs across 2-3 lenders' quoted rates before signing — even 0.5% makes a real difference over 20 years.", "Factor in processing fees and insurance add-ons separately; this calculator shows only principal and interest."]
+  },
+  gst: {
+    adv: ["Switch instantly between adding GST to a base price and extracting GST from an inclusive price — most tools only do one direction.", "Covers every standard Indian GST slab (3%, 5%, 12%, 18%, 28%) in one place.", "Useful for shopkeepers, freelancers and accountants who need a quick invoice check without opening billing software.", "Shows the exact tax amount separately from the final price, useful for bookkeeping."],
+    tips: ["Double-check which slab applies to your specific goods or service on the official GST portal — rates vary by HSN/SAC code.", "When quoting customers, always clarify whether your listed price is GST-inclusive or exclusive to avoid billing disputes.", "For interstate sales, remember GST is usually split as IGST rather than CGST+SGST — the total tax amount stays the same either way.", "Keep this calculator handy while reconciling GSTR filings against your invoice register."]
+  },
+  sip: {
+    adv: ["Visualises how small, regular investments compound into a large corpus over long horizons.", "Supports monthly, quarterly and yearly SIP frequencies, not just the common monthly case.", "Helps you reverse-engineer the SIP amount needed for a target corpus by trying different inputs.", "Free of the account-opening prompts that most fund-house SIP calculators push you through."],
+    tips: ["Starting a SIP even a few years earlier usually matters more than chasing a slightly higher return rate — try the calculator with different start dates to see the effect.", "Use a conservative return assumption (10-12%) rather than an optimistic one to avoid under-saving for your goal.", "Increase your SIP amount by 5-10% every year (a 'step-up' SIP) to keep pace with rising income and inflation.", "Remember this is a projection, not a promise — actual mutual fund returns fluctuate with the market."]
+  },
+  fd: {
+    adv: ["Models monthly, quarterly, half-yearly and yearly compounding separately, matching how banks actually calculate FD interest.", "Lets you quickly compare maturity value across different tenures and rates before booking a deposit.", "Shows total interest earned clearly, useful when estimating your annual taxable interest income.", "No branch visit or login required to get an estimate."],
+    tips: ["Interest earned on an FD is fully taxable at your income tax slab rate — factor this into your real, post-tax return.", "Banks may deduct TDS if your total FD interest across accounts exceeds the prescribed annual threshold — submit Form 15G/15H if eligible to avoid this.", "Laddering FDs across multiple maturities (rather than one large FD) can improve liquidity without sacrificing much return.", "Compare quarterly-compounding FD rates across a few banks — small compounding differences add up on larger amounts."]
+  },
+  ppf: {
+    adv: ["Projects your full 15-year PPF maturity value from a single yearly contribution figure.", "Reflects PPF's actual annual (not monthly) compounding convention used by the government.", "Handy for comparing PPF against other tax-saving instruments like ELSS or NPS at a glance.", "Requires no PPF account login — useful for planning before you even open an account."],
+    tips: ["Deposit before 5th April each year (or the 5th of the month) to earn interest on that month's balance — timing your contribution earlier in the year noticeably improves the final corpus.", "PPF's EEE tax status (contribution, interest and maturity all tax-free) makes it one of the most tax-efficient long-term debt options available in India.", "You can extend a matured PPF account in blocks of 5 years, with or without further contributions — plan ahead for this choice.", "Remember the government revises the PPF rate quarterly, so treat this projection as an estimate, not a guarantee."]
+  },
+  rd: {
+    adv: ["Estimates recurring deposit maturity value using a monthly-compounding approximation close to what most banks quote.", "Useful for comparing an RD against an equivalent SIP in a debt fund for a short-term goal.", "Works for any bank or post-office RD scheme since it uses the standard RD formula, not a bank-specific tool.", "Instant results without needing to log into net banking."],
+    tips: ["RDs suit short, fixed savings goals (1-5 years) where you want a guaranteed, low-risk return rather than market-linked growth.", "Missing an instalment usually attracts a small penalty — set up an auto-debit to avoid this.", "Interest on RDs is taxable and TDS may apply, similar to fixed deposits — plan for this in your post-tax calculations.", "Compare RD rates across banks and post office schemes, since post office RDs sometimes offer a marginally better rate."]
+  },
+  lumpsum: {
+    adv: ["Projects the growth of a one-time investment using compound growth, ideal for bonuses, maturity payouts or inheritance.", "Lets you quickly test how different expected-return assumptions change your outcome.", "Complements the SIP calculator for comparing a lumpsum vs staggered investment strategy.", "No fund-house login needed for a rough projection."],
+    tips: ["If you're investing a large lumpsum in equity, consider staggering it over 3-6 months (STP) to reduce the risk of investing right before a market dip.", "Use a realistic, long-term average return rather than a recent bull-market return when projecting equity lumpsum growth.", "Revisit and rebalance a lumpsum investment periodically rather than leaving it untouched for the entire tenure.", "Remember this projection excludes exit load, expense ratio and capital gains tax, all of which reduce your real return."]
+  },
+  'car-loan': {
+    adv: ["Gives a lender-agnostic EMI estimate before you walk into a dealership or bank, improving your negotiating position.", "Shows total interest cost, which helps you judge whether a longer tenure 'low EMI' offer is actually more expensive overall.", "Useful for comparing a bank loan against a dealer/NBFC finance scheme on equal terms.", "Quick enough to re-run with different down payments to see the EMI impact instantly."],
+    tips: ["A larger down payment reduces both your EMI and total interest paid — even 10-15% extra upfront makes a visible difference.", "Car loan interest rates are usually higher than home loan rates since the vehicle depreciates quickly as collateral — shop around before accepting the dealer's in-house financing.", "Keep tenure under 5 years where possible; cars lose value faster than a long loan gets paid off.", "Factor in insurance, registration and extended warranty costs separately — this calculator covers only the loan EMI."]
+  },
+  'home-loan': {
+    adv: ["Handles large principal amounts and long tenures (up to 30 years) accurately using the standard reducing-balance formula.", "Shows total interest paid over the full tenure, which on a home loan is often larger than the principal itself.", "Useful for testing how extra tenure or a rate change affects affordability before you lock in a loan.", "No CIBIL check or personal data required for a quick estimate."],
+    tips: ["Even a small extra monthly payment (prepayment) early in the loan can cut years off the tenure and save lakhs in interest, since home loan interest is front-loaded.", "Under the old tax regime, home loan interest and principal repayment can qualify for deductions under Sections 24(b) and 80C — check current rules with a CA.", "If you have a floating-rate loan, re-run this calculator whenever your bank revises the rate to see the updated EMI or tenure impact.", "Compare the total cost (EMI × tenure) across lenders, not just the advertised interest rate, since processing fees and other charges vary."]
+  },
+  'gold-loan': {
+    adv: ["Covers both standard EMI and interest-only (bullet repayment) gold loan structures in a single tool.", "Useful for quickly comparing a gold loan against a personal loan for short-term liquidity needs.", "Shows the monthly cash outflow difference between the two repayment structures clearly.", "No need to visit a lender to get a ballpark estimate before pledging gold."],
+    tips: ["An interest-only gold loan keeps monthly payments low but requires you to have the full principal ready at the end of tenure — plan for that lump sum in advance.", "Gold loans are usually approved faster and at lower rates than personal loans since they're secured against collateral — but you risk losing the pledged gold on default.", "Check the loan-to-value (LTV) ratio your lender offers, since RBI caps this and it affects how much you can borrow against your gold's value.", "Compare processing fees and valuation charges across lenders, not just the headline interest rate."]
+  },
+  'education-loan': {
+    adv: ["Accounts for the moratorium period (course duration plus grace period) that most other loan calculators ignore.", "Shows how moratorium interest gets added to your principal before EMIs begin, which is a common source of confusion.", "Useful for students and parents comparing loan offers from different banks before applying.", "Free to use while researching, unlike bank pre-approval tools that require documentation."],
+    tips: ["Paying at least the interest during the moratorium period (if you can afford to) prevents it from compounding into your principal and keeps your eventual EMI lower.", "Under Section 80E, the entire interest paid on an education loan is tax-deductible for up to 8 years with no upper limit — a benefit not available on most other loan types.", "Public sector banks often offer better education loan rates and longer moratoriums for recognised institutions — compare a few before choosing a lender.", "Check whether a moratorium-period interest subsidy scheme applies to your family's income bracket, which can meaningfully reduce your total cost."]
+  },
+  'personal-loan': {
+    adv: ["Gives a quick, lender-agnostic estimate before you compare offers, since personal loan rates vary widely between lenders.", "Shows total interest cost clearly, which matters more on personal loans given their typically higher rates.", "Useful for judging whether a personal loan or a cheaper secured alternative (like a gold loan) suits your need better.", "No credit check or documentation needed just to see an estimate."],
+    tips: ["Personal loans are unsecured, so rates are meaningfully higher than home or car loans — borrow only what you need and repay as fast as comfortably possible.", "Watch out for processing fees (often 1-3% of the loan amount) which aren't reflected in the EMI figure alone.", "Check the prepayment/foreclosure penalty before signing — many lenders charge 2-5% of the outstanding amount for early closure.", "A higher credit score typically unlocks a meaningfully lower rate — checking and improving your score before applying can be worth the wait."]
+  },
+  salary: {
+    adv: ["Breaks down how a CTC figure translates into real monthly take-home pay, which most offer letters don't clearly show.", "Accounts for common deductions like employer PF, gratuity accrual and professional tax in one estimate.", "Useful for comparing two job offers with different CTC structures on an apples-to-apples, in-hand basis.", "Runs instantly without needing your actual payslip or HR system access."],
+    tips: ["Always ask for a full salary breakup (not just CTC) when evaluating a job offer — the same CTC can result in very different take-home pay depending on the structure.", "Remember this estimate excludes income tax (TDS) — use the Income Tax Calculator alongside this one for a fuller picture.", "A higher Basic salary usually means higher PF and gratuity contributions, which reduce take-home pay now but build retirement savings.", "Negotiate flexible benefits (like meal cards or LTA) where possible, since these can be more tax-efficient than an equivalent cash allowance."]
+  },
+  hra: {
+    adv: ["Applies the correct 'least of three' HRA exemption rule automatically, which is easy to get wrong by hand.", "Accounts for metro vs non-metro city status, which changes the exemption percentage.", "Useful for salaried employees deciding how much rent receipt documentation to gather before tax filing.", "Gives an instant estimate without needing to consult a CA for a simple case."],
+    tips: ["HRA exemption is only available under the old tax regime — if you've opted for the new regime, this exemption won't apply to your return.", "If your annual rent exceeds ₹1 lakh, you'll need your landlord's PAN to claim the exemption — collect this early in the financial year.", "Paying rent to a family member (like a parent) can still qualify for HRA exemption if it's genuine and documented, but keep clear payment records.", "If you don't pay rent but receive HRA as part of your salary, remember the entire amount becomes taxable — plan your salary structure accordingly."]
+  },
+  'income-tax': {
+    adv: ["Compares the old and new tax regimes side by side, helping you pick whichever saves more based on your actual numbers.", "Applies current FY 2025-26 slabs, the standard deduction and the Section 87A rebate automatically.", "Useful for quick what-if planning — for example, seeing how an additional 80C investment changes your old-regime liability.", "Saves time compared to manually working through slab-wise tax calculations."],
+    tips: ["The new regime usually suits those with few deductions to claim, while the old regime tends to favour people with significant 80C, HRA or home loan interest deductions — run both scenarios before deciding.", "This is a simplified estimate excluding surcharge (applicable above ₹50 lakh) and special-rate incomes like capital gains — consult a CA for a precise figure if your income is complex.", "You can typically switch between regimes each year if you're a salaried employee without business income — reassess annually as your deductions change.", "File your return before the deadline even if your tax liability is zero after rebate, to keep your compliance record clean for loan or visa applications."]
+  },
+  gratuity: {
+    adv: ["Applies the exact formula from the Payment of Gratuity Act, 1972, including the standard rounding rule for part years.", "Useful for employees planning a resignation date or estimating retirement benefits in advance.", "Shows the tax-exempt threshold context so you know when gratuity might become taxable.", "No HR system access needed to get a ballpark figure."],
+    tips: ["You generally need 5+ years of continuous service to be eligible for gratuity under the Act — check your specific employment terms if you're close to that mark.", "Gratuity is exempt from tax up to ₹20 lakh for employees covered under the Act; anything above that is taxable — relevant if you have a very high last-drawn salary and long tenure.", "If your final year of service exceeds 6 months, it typically rounds up to a full year for the calculation — timing your exit date can matter.", "Confirm with HR whether your organisation is covered under the Payment of Gratuity Act, as some smaller employers may follow different internal policies."]
+  },
+  nps: {
+    adv: ["Projects both the lumpsum-at-retirement and estimated monthly pension in one calculation, which most NPS tools split across two steps.", "Useful for comparing NPS against other long-term retirement options like PPF or mutual funds.", "Lets you test different contribution amounts and expected returns to see the impact on your eventual pension.", "No NPS account or PRAN login required to get an estimate."],
+    tips: ["Up to 60% of your NPS corpus can be withdrawn tax-free as a lumpsum at retirement; the remaining 40%+ must go into an annuity — plan your other retirement savings around this rule.", "NPS returns are market-linked for equity and corporate debt schemes, so treat any projected corpus as an estimate rather than a guarantee.", "Consider your asset allocation (equity vs debt) within NPS based on your years to retirement — younger contributors can typically afford a higher equity allocation.", "NPS contributions under Section 80CCD(1B) offer an additional ₹50,000 deduction over and above the 80C limit — a benefit worth factoring into your tax planning."]
+  },
+  inflation: {
+    adv: ["Shows in concrete rupee terms how inflation erodes purchasing power, which is often more intuitive than an abstract percentage.", "Useful for setting realistic future targets for goals like education, weddings or retirement.", "Lets you test multiple inflation assumptions quickly to stress-test your financial plan.", "Pairs naturally with the Retirement and SIP calculators for fuller goal planning."],
+    tips: ["Use a higher inflation assumption (8-10%) for goals like education or healthcare, which have historically outpaced general retail inflation.", "Remember this calculator models purchasing-power erosion only — pair it with the SIP or Lumpsum calculator to see if your planned investment growth can outpace it.", "Revisit your inflation assumption periodically, since actual inflation varies year to year and across categories.", "When setting a long-term goal amount, always target the future inflated value, not today's cost, to avoid under-saving."]
+  },
+  retirement: {
+    adv: ["Combines pre- and post-retirement return assumptions in one model, reflecting how portfolios typically shift to safer assets after retirement.", "Converts a large, abstract 'retirement corpus' target into a concrete, actionable monthly SIP figure.", "Useful for testing how retiring a few years earlier or later changes the required monthly savings.", "Free to re-run as often as you like while refining your retirement plan."],
+    tips: ["Starting even 5 years earlier can dramatically reduce the monthly SIP needed to reach the same retirement corpus, thanks to compounding — don't delay starting, even with a small amount.", "This estimate assumes you start with zero existing savings — subtract the projected future value of your current retirement savings for a more accurate required SIP.", "Revisit and adjust your plan every few years as your expenses, income and market returns evolve — a retirement plan isn't a one-time calculation.", "Consider healthcare inflation separately, since medical costs in retirement often rise faster than general living expenses."]
+  },
+  'mf-returns': {
+    adv: ["Calculates both absolute return and CAGR, helping you understand the difference between total gain and annualised growth rate.", "Useful for comparing two mutual funds or investments held for different time periods on a fair, annualised basis.", "Works for any investment type (stocks, mutual funds, real estate) since it only needs the initial and final values plus the holding period.", "Instant results without needing to log into a fund house or brokerage portal."],
+    tips: ["Always compare CAGR, not absolute return, when judging investments held over different time periods — a 50% absolute return over 5 years is very different from 50% over 1 year.", "Remember CAGR smooths out year-to-year volatility into a single average rate; your actual yearly returns may have swung well above or below that number.", "This calculator only works for single-value-to-single-value comparisons — for SIP investments, use the SIP Calculator instead, since instalments complicate a simple CAGR calculation.", "Factor in exit load and capital gains tax separately, since neither is included in this raw return calculation."]
+  },
+  currency: {
+    adv: ["Uses a live exchange rate fetched at the time of conversion, rather than a stale, hardcoded rate.", "Falls back to a clearly labelled approximate rate if the live fetch fails, so you're never left without an answer.", "Supports all major currencies commonly needed by Indian travellers, students and businesses.", "No account or app download needed for a quick conversion check."],
+    tips: ["Use this for reference only — your bank, card network or remittance service will apply their own markup over the market rate shown here.", "For large international transfers, compare rates and fees across a few remittance providers, since the difference can be significant on bigger amounts.", "Exchange rates move throughout the day — if timing matters for a large transaction, check again close to when you actually plan to convert.", "When travelling, factor in your card's foreign transaction fee on top of the exchange rate for a true cost comparison."]
+  },
+  age: {
+    adv: ["Calculates exact age down to the day, accounting automatically for leap years and varying month lengths.", "Shows a countdown to your next birthday alongside your current age.", "Useful for filling out forms, eligibility checks (age limits for exams, schemes, etc.) or simple curiosity.", "Works entirely offline in your browser — no data about your birth date is ever sent anywhere."],
+    tips: ["Many government scheme and exam age-eligibility rules use a specific cut-off date (not 'today') — double check the relevant notification's exact reference date if applying for something age-restricted.", "Use this alongside a specific target date (by temporarily setting your device's date) if you need your age as of a future application deadline.", "Keep a note of your exact age in days if you're tracking a milestone like 10,000 days — small details like these are easy to lose track of otherwise.", "Double-check your date of birth against your official documents (Aadhaar, birth certificate) before relying on any age-based calculation for legal or official purposes."]
+  },
+  percentage: {
+    adv: ["Handles all three common percentage problems — 'X% of Y', 'X is what % of Y', and percentage change — in one tool.", "Clearly labels increases vs decreases, avoiding the sign confusion that trips people up in manual percentage-change calculations.", "Useful for quick checks on discounts, marks, salary hikes or any other everyday percentage question.", "Accepts decimal values for more precise results than typical mental-math estimates."],
+    tips: ["When comparing a 'percentage increase' to a 'percentage point' change (common in interest rate or inflation discussions), remember they mean different things — this calculator computes percentage increase, not percentage points.", "For discount calculations, remember that a 20% discount followed by another 10% discount is not the same as a flat 30% discount — apply them sequentially instead.", "Double-check whether a percentage change should be calculated on the original (base) value or the new value — this calculator uses the original value as the base, the standard convention.", "For salary hikes, remember a 20% increase followed by a 20% decrease does not bring you back to your original number — the base changes each time."]
+  }
+};
+Object.entries(ADV_TIPS).forEach(([key, data])=>{
+  const faqEl = document.getElementById(key + '_faq');
+  if(!faqEl) return;
+  const block = faqEl.closest('.info-block');
+  if(!block) return;
+  const section = document.createElement('div');
+  section.innerHTML =
+    '<h2>Advantages of using this calculator</h2>' +
+    '<ul class="adv-list">' + data.adv.map(a=>'<li>'+a+'</li>').join('') + '</ul>' +
+    '<h2>Tips</h2>' +
+    '<ul class="adv-list">' + data.tips.map(t=>'<li>'+t+'</li>').join('') + '</ul>';
+  const related = block.querySelector('.related');
+  if(related) block.insertBefore(section, related);
+  else block.appendChild(section);
 });
 
 route();
