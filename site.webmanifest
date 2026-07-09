@@ -1,0 +1,9 @@
+{
+  "name": "MeowCalculator",
+  "short_name": "MeowCalculator",
+  "description": "Free EMI, GST, SIP, Tax & 20+ financial calculators for India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111111"
+}

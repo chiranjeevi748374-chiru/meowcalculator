@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+  This file exists purely as a fallback for static hosts that don't support
+  server-side rewrites (e.g. GitHub Pages). When someone requests a clean
+  URL like /emi-calculator directly, the host serves this 404.html because
+  no such file exists on disk. It stashes the requested path and redirects
+  to the real app, which restores that path via the History API and renders
+  the correct page — see the small script in index.html's <head>.
+  Hosts that support proper rewrites (Netlify, Vercel, Apache via .htaccess)
+  never hit this file at all; see _redirects, vercel.json and .htaccess.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>Redirecting… | MeowCalculator</title>
+<script>
+  sessionStorage.setItem('mc_redirect_path', location.pathname + location.search + location.hash);
+  location.replace('/');
+</script>
+</head>
+<body>
+<p>Redirecting to <a href="/">MeowCalculator</a>…</p>
+</body>
+</html>
