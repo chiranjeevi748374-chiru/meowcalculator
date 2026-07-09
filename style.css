@@ -203,18 +203,40 @@ button{font-family:var(--font-body);cursor:pointer;}
 .related a{border:1px solid var(--color-border);border-radius:999px;padding:8px 16px;font-size:.85rem;font-weight:500;color:var(--color-text);}
 .related a:hover{border-color:var(--color-primary);color:var(--color-primary);}
 
-/* about / contact */
+/* about / contact / legal pages */
 .simple-page{max-width:680px;margin:0 auto;padding:60px 20px 80px;}
 .simple-page h1{font-size:2rem;}
+.simple-page h2{font-size:1.15rem;margin-top:32px;}
+.simple-page p{color:var(--color-text);line-height:1.65;}
+.simple-page a{color:var(--color-primary);}
 .contact-form .field{margin-bottom:16px;}
 .contact-form textarea{width:100%;padding:11px 13px;border:1.5px solid var(--color-border);border-radius:var(--radius-sm);background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);min-height:110px;}
+
+/* advantage / tips / sitemap bullet lists used across info-blocks and legal pages */
+.adv-list{margin:0 0 20px;padding:0 0 0 4px;list-style:none;}
+.adv-list li{position:relative;padding:8px 0 8px 26px;font-size:.94rem;line-height:1.55;color:var(--color-text);border-bottom:1px solid var(--color-border);}
+.adv-list li:last-child{border-bottom:none;}
+.adv-list li::before{content:'✓';position:absolute;left:0;top:8px;color:var(--color-success);font-weight:700;}
+.simple-page .adv-list li::before{content:'•';color:var(--color-primary);}
+
+/* contact method cards */
+.contact-methods{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:24px;}
+.contact-method{display:flex;gap:14px;align-items:flex-start;padding:18px;border:1.5px solid var(--color-border);border-radius:var(--radius-md);color:var(--color-text);background:var(--color-bg-soft);transition:border-color .15s ease,transform .15s ease;}
+.contact-method:hover{border-color:var(--color-primary);transform:translateY(-2px);}
+.contact-method .cm-ic{font-size:1.6rem;flex:none;}
+.contact-method h3{font-size:1rem;margin:0 0 4px;}
+.contact-method p{margin:0;font-size:.85rem;color:var(--color-text-mute);word-break:break-word;}
 
 footer{border-top:1px solid var(--color-border);padding:40px 20px 24px;color:var(--color-text-mute);font-size:.82rem;}
 .footer-sitemap{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-bottom:26px;}
 .footer-col h5{font-family:var(--font-display);font-size:.85rem;color:var(--color-text);margin:0 0 10px;}
 .footer-col a{display:block;color:var(--color-text-mute);font-size:.82rem;padding:3px 0;}
 .footer-col a:hover{color:var(--color-primary);}
+.footer-contact{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;padding-bottom:18px;font-size:.85rem;}
+.footer-contact a{color:var(--color-text-mute);}
+.footer-contact a:hover{color:var(--color-primary);}
 .footer-bottom{text-align:center;border-top:1px solid var(--color-border);padding-top:18px;}
+.footer-bottom a{color:var(--color-text-mute);text-decoration:underline;}
 @media(max-width:760px){.footer-sitemap{grid-template-columns:repeat(2,1fr);}}
 
 @media print{
