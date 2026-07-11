@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RD Calculator — Recurring Deposit Maturity Value | MeowCalculator</title>
+<meta name="description" content="Calculate the maturity value of a recurring deposit based on your monthly instalment, interest rate and tenure.">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="EMI calculator, GST calculator, SIP calculator, FD calculator, income tax calculator India, HRA calculator, PPF calculator, financial calculators India">
+<meta property="og:title" content="RD Calculator — Recurring Deposit Maturity Value | MeowCalculator">
+<meta property="og:description" content="Calculate the maturity value of a recurring deposit based on your monthly instalment, interest rate and tenure.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.meowcalculator.com/rd-calculator/">
+<meta property="og:site_name" content="MeowCalculator">
+<meta property="og:image" content="https://www.meowcalculator.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RD Calculator — Recurring Deposit Maturity Value | MeowCalculator">
+<meta name="twitter:description" content="Calculate the maturity value of a recurring deposit based on your monthly instalment, interest rate and tenure.">
+<meta name="twitter:image" content="https://www.meowcalculator.com/og-image.png">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="canonical" id="canonicalLink" href="https://www.meowcalculator.com/rd-calculator/">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1E56E3">
+<script>
+// Restores the real path after the GitHub-Pages-style 404.html fallback
+// redirect (see /404.html). No-op on hosts with proper SPA rewrites, since
+// sessionStorage will simply be empty there.
+(function(){
+  var saved = sessionStorage.getItem('mc_redirect_path');
+  if(saved){
+    sessionStorage.removeItem('mc_redirect_path');
+    if(saved !== '/' ) history.replaceState(null, '', saved);
+  }
+})();
+</script>
+<script type="application/ld+json" id="orgSchema">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "MeowCalculator",
+  "url": "https://www.meowcalculator.com/",
+  "description": "Free Indian financial calculators for EMI, GST, SIP, FD, tax, salary and investment planning."
+}
+</script>
+<script type="application/ld+json" id="pageSchema">{}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link rel="stylesheet" href="../style.min.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand"><span class="mark"><img src="data:image/png;base64,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" alt="MeowCalculator logo"></span>MeowCalculator</a>
+    <div class="nav-search" id="navSearch">
+      <span class="nav-search-icon">🔍</span>
+      <input type="text" id="calcSearchInput" placeholder="Search calculators…" autocomplete="off" aria-label="Search calculators">
+      <div class="nav-search-results" id="navSearchResults"></div>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" data-route="home">Home</a>
+      <div class="dropdown">
+        <a href="#emi-calculator" data-route="emi-calculator">Calculators ▾</a>
+        <div class="dropdown-menu">
+          <div class="dd-group-label">Popular</div>
+          <a href="#emi-calculator" data-route="emi-calculator">EMI Calculator</a>
+          <a href="#gst-calculator" data-route="gst-calculator">GST Calculator</a>
+          <a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a>
+          <a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a>
+          <div class="dd-group-label">Loan Calculators</div>
+          <a href="#car-loan-calculator" data-route="car-loan-calculator">Car Loan Calculator</a>
+          <a href="#home-loan-calculator" data-route="home-loan-calculator">Home Loan Calculator</a>
+          <a href="#gold-loan-calculator" data-route="gold-loan-calculator">Gold Loan Calculator</a>
+          <a href="#education-loan-calculator" data-route="education-loan-calculator">Education Loan Calculator</a>
+          <a href="#personal-loan-calculator" data-route="personal-loan-calculator">Personal Loan Calculator</a>
+          <div class="dd-group-label">Investment & Savings</div>
+          <a href="#ppf-calculator" data-route="ppf-calculator">PPF Calculator</a>
+          <a href="#rd-calculator" data-route="rd-calculator">RD Calculator</a>
+          <a href="#lumpsum-calculator" data-route="lumpsum-calculator">Lumpsum Calculator</a>
+          <a href="#nps-calculator" data-route="nps-calculator">NPS Calculator</a>
+          <a href="#retirement-calculator" data-route="retirement-calculator">Retirement Calculator</a>
+          <a href="#mf-returns-calculator" data-route="mf-returns-calculator">Mutual Fund Returns Calculator</a>
+          <div class="dd-group-label">Tax & Salary</div>
+          <a href="#salary-calculator" data-route="salary-calculator">Salary Calculator</a>
+          <a href="#hra-calculator" data-route="hra-calculator">HRA Calculator</a>
+          <a href="#income-tax-calculator" data-route="income-tax-calculator">Income Tax Calculator</a>
+          <a href="#gratuity-calculator" data-route="gratuity-calculator">Gratuity Calculator</a>
+          <div class="dd-group-label">Everyday Utility</div>
+          <a href="#inflation-calculator" data-route="inflation-calculator">Inflation Calculator</a>
+          <a href="#currency-calculator" data-route="currency-calculator">Currency Converter</a>
+          <a href="#age-calculator" data-route="age-calculator">Age Calculator</a>
+          <a href="#percentage-calculator" data-route="percentage-calculator">Percentage Calculator</a>
+        </div>
+      </div>
+      <a href="#about" data-route="about">About</a>
+      <a href="#contact" data-route="contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+    </div>
+  </div>
+</nav>
+
+<main id="app">
+
+<!-- HOME -->
+<section id="home" class="page hidden">
+  <div class="hero">
+    <span class="eyebrow">Made for India · Free forever</span>
+    <h1>Every loan, tax and investment number, worked out in one place.</h1>
+    <p class="lead">23 calculators, one clean workspace. Type your numbers, get an instant, exact result — no sign-up, no clutter.</p>
+  </div>
+  <div class="card-grid">
+    <a class="calc-card emi" href="#emi-calculator" data-route="emi-calculator">
+      <div class="ic">💰</div><h3>EMI Calculator</h3><p>Work out your monthly loan instalment, interest and total payment.</p>
+    </a>
+    <a class="calc-card gst" href="#gst-calculator" data-route="gst-calculator">
+      <div class="ic">🧾</div><h3>GST Calculator</h3><p>Add or remove GST from any amount at standard Indian slab rates.</p>
+    </a>
+    <a class="calc-card sip" href="#sip-calculator" data-route="sip-calculator">
+      <div class="ic">📈</div><h3>SIP Calculator</h3><p>Project the future value of your monthly, quarterly or yearly SIP.</p>
+    </a>
+    <a class="calc-card fd" href="#fd-calculator" data-route="fd-calculator">
+      <div class="ic">🏦</div><h3>FD Calculator</h3><p>See exactly what your fixed deposit will be worth at maturity.</p>
+    </a>
+  </div>
+  <div class="calc-group">
+    <h2>Loan Calculators</h2>
+    <p class="sub">Work out EMIs, interest and total cost across every loan type.</p>
+    <div class="card-grid">
+    <a class="calc-card" href="#car-loan-calculator" data-route="car-loan-calculator">
+      <div class="ic">🚗</div><h3>Car Loan Calculator</h3><p>Work out your monthly car loan EMI, interest and total payment.</p>
+    </a>
+    <a class="calc-card" href="#home-loan-calculator" data-route="home-loan-calculator">
+      <div class="ic">🏠</div><h3>Home Loan Calculator</h3><p>Work out your monthly home loan EMI, interest and total payment.</p>
+    </a>
+    <a class="calc-card" href="#gold-loan-calculator" data-route="gold-loan-calculator">
+      <div class="ic">🪙</div><h3>Gold Loan Calculator</h3><p>Work out your gold loan EMI or interest-only monthly payment.</p>
+    </a>
+    <a class="calc-card" href="#education-loan-calculator" data-route="education-loan-calculator">
+      <div class="ic">🎓</div><h3>Education Loan Calculator</h3><p>Estimate your EMI after accounting for the moratorium period.</p>
+    </a>
+    <a class="calc-card" href="#personal-loan-calculator" data-route="personal-loan-calculator">
+      <div class="ic">💳</div><h3>Personal Loan Calculator</h3><p>Work out your personal loan EMI, interest and total payment.</p>
+    </a>
+    </div>
+  </div>
+  <div class="calc-group">
+    <h2>Investment & Savings</h2>
+    <p class="sub">Project how your money grows across schemes and time horizons.</p>
+    <div class="card-grid">
+    <a class="calc-card" href="#ppf-calculator" data-route="ppf-calculator">
+      <div class="ic">🏛️</div><h3>PPF Calculator</h3><p>Estimate your Public Provident Fund maturity value with yearly compounding.</p>
+    </a>
+    <a class="calc-card" href="#rd-calculator" data-route="rd-calculator">
+      <div class="ic">🪙</div><h3>RD Calculator</h3><p>Find the maturity value of your recurring deposit.</p>
+    </a>
+    <a class="calc-card" href="#lumpsum-calculator" data-route="lumpsum-calculator">
+      <div class="ic">💵</div><h3>Lumpsum Calculator</h3><p>Project the future value of a one-time investment.</p>
+    </a>
+    <a class="calc-card" href="#nps-calculator" data-route="nps-calculator">
+      <div class="ic">🏛️</div><h3>NPS Calculator</h3><p>Project your NPS corpus, lumpsum withdrawal and estimated monthly pension.</p>
+    </a>
+    <a class="calc-card" href="#retirement-calculator" data-route="retirement-calculator">
+      <div class="ic">🌴</div><h3>Retirement Calculator</h3><p>Estimate the corpus you'll need and how much to save monthly to get there.</p>
+    </a>
+    <a class="calc-card" href="#mf-returns-calculator" data-route="mf-returns-calculator">
+      <div class="ic">📊</div><h3>Mutual Fund Returns Calculator</h3><p>Calculate the absolute and annualised (CAGR) return on your investment.</p>
+    </a>
+    </div>
+  </div>
+  <div class="calc-group">
+    <h2>Tax & Salary</h2>
+    <p class="sub">Break down your pay, exemptions and tax liability.</p>
+    <div class="card-grid">
+    <a class="calc-card" href="#salary-calculator" data-route="salary-calculator">
+      <div class="ic">🧮</div><h3>Salary Calculator</h3><p>Break your CTC down into basic, deductions and monthly take-home.</p>
+    </a>
+    <a class="calc-card" href="#hra-calculator" data-route="hra-calculator">
+      <div class="ic">🏙️</div><h3>HRA Calculator</h3><p>Work out your tax-exempt HRA amount under the old tax regime.</p>
+    </a>
+    <a class="calc-card" href="#income-tax-calculator" data-route="income-tax-calculator">
+      <div class="ic">🧾</div><h3>Income Tax Calculator</h3><p>Estimate your income tax for FY 2025-26 under the new or old regime.</p>
+    </a>
+    <a class="calc-card" href="#gratuity-calculator" data-route="gratuity-calculator">
+      <div class="ic">🎁</div><h3>Gratuity Calculator</h3><p>Calculate the gratuity amount payable under the Payment of Gratuity Act.</p>
+    </a>
+    </div>
+  </div>
+  <div class="calc-group">
+    <h2>Everyday Utility</h2>
+    <p class="sub">Quick, everyday number-crunching tools.</p>
+    <div class="card-grid">
+    <a class="calc-card" href="#inflation-calculator" data-route="inflation-calculator">
+      <div class="ic">📉</div><h3>Inflation Calculator</h3><p>See what today's money will be worth — or cost — in the future.</p>
+    </a>
+    <a class="calc-card" href="#currency-calculator" data-route="currency-calculator">
+      <div class="ic">💱</div><h3>Currency Converter</h3><p>Convert between major world currencies using live exchange rates.</p>
+    </a>
+    <a class="calc-card" href="#age-calculator" data-route="age-calculator">
+      <div class="ic">🎂</div><h3>Age Calculator</h3><p>Find your exact age in years, months and days, plus your next birthday countdown.</p>
+    </a>
+    <a class="calc-card" href="#percentage-calculator" data-route="percentage-calculator">
+      <div class="ic">🔢</div><h3>Percentage Calculator</h3><p>Find a percentage of a number, work out what percent one number is of another, or find percentage change.</p>
+    </a>
+    </div>
+  </div>
+  <div class="section-band">
+    <div class="mini-grid">
+      <div class="item"><div class="num">23</div><div class="lbl">Calculators live</div></div>
+      <div class="item"><div class="num">&lt;2s</div><div class="lbl">Page load</div></div>
+      <div class="item"><div class="num">100%</div><div class="lbl">Free, no login</div></div>
+      <div class="item"><div class="num">₹0</div><div class="lbl">Cost, always</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EMI -->
+<section id="emi-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Loan EMI</span>
+    <h2>EMI Calculator</h2>
+    <p>Enter your loan amount, interest rate and tenure to see your exact monthly instalment.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="emi_amount_f">
+        <label for="emi_amount">Loan amount (₹)</label>
+        <input type="number" id="emi_amount" placeholder="Enter loan amount" min="0">
+        <div class="err">Please enter a valid loan amount.</div>
+      </div>
+      <div class="field" id="emi_rate_f">
+        <label for="emi_rate">Interest rate (% per year)</label>
+        <input type="number" id="emi_rate" placeholder="e.g. 9" min="0" step="0.01">
+        <div class="chip-row" data-target="emi_rate" data-values="7,8,9,10,11,12"></div>
+        <div class="err">Please enter a valid interest rate.</div>
+      </div>
+      <div class="field" id="emi_tenure_f">
+        <label for="emi_tenure">Loan tenure</label>
+        <div class="two-col">
+          <input type="number" id="emi_tenure" placeholder="e.g. 20" min="1">
+          <select id="emi_tenure_unit"><option value="years">Years</option><option value="months">Months</option></select>
+        </div>
+        <div class="chip-row" data-target="emi_tenure" data-values="1,2,3,5,7,10,15,20,25,30"></div>
+        <div class="err">Please enter a valid tenure.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.emi()">Calculate EMI</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('emi')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="emi_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in the loan details and press Calculate EMI to see your results here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the EMI calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the total loan amount you plan to borrow.</p></div>
+      <div class="step"><div class="n">02</div><p>Pick or type the annual interest rate offered by your lender.</p></div>
+      <div class="step"><div class="n">03</div><p>Set the tenure in years or months and calculate.</p></div>
+    </div>
+    <h2>EMI formula</h2>
+    <div class="formula-box">EMI = P × r × (1 + r)ⁿ / ((1 + r)ⁿ − 1)&nbsp;&nbsp;where P = principal, r = monthly interest rate, n = number of monthly instalments</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="emi_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="emi_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#gst-calculator" data-route="gst-calculator">GST Calculator</a>
+      <a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a>
+      <a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a>
+    </div>
+  </div>
+</section>
+
+<!-- GST -->
+<section id="gst-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Tax</span>
+    <h2>GST Calculator</h2>
+    <p>Add GST to a base amount, or pull the GST out of a final, tax-inclusive amount.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field">
+        <label for="gst_mode">Mode</label>
+        <select id="gst_mode"><option value="add">Add GST</option><option value="remove">Remove GST</option></select>
+      </div>
+      <div class="field" id="gst_amount_f">
+        <label for="gst_amount" id="gst_amount_lbl">Amount (₹)</label>
+        <input type="number" id="gst_amount" placeholder="Enter amount" min="0">
+        <div class="err">Please enter a valid amount.</div>
+      </div>
+      <div class="field" id="gst_rate_f">
+        <label for="gst_rate">GST rate (%)</label>
+        <input type="number" id="gst_rate" placeholder="e.g. 18" min="0" step="0.01">
+        <div class="chip-row" data-target="gst_rate" data-values="3,5,12,18,28"></div>
+        <div class="err">Please enter a valid GST rate.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.gst()">Calculate GST</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('gst')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="gst_result">
+      <h4>Result</h4>
+      <div class="empty">Enter an amount and GST rate, then calculate to see the breakup here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the GST calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Choose whether you want to add GST or remove it from an inclusive amount.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the amount and pick the applicable GST slab.</p></div>
+      <div class="step"><div class="n">03</div><p>Calculate to see the original amount, GST amount and final amount.</p></div>
+    </div>
+    <h2>GST formula</h2>
+    <div class="formula-box">Add GST: Final = Amount × (1 + rate/100)&nbsp;&nbsp;·&nbsp;&nbsp;Remove GST: Original = Amount ÷ (1 + rate/100)</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="gst_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="gst_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#emi-calculator" data-route="emi-calculator">EMI Calculator</a>
+      <a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a>
+      <a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a>
+    </div>
+  </div>
+</section>
+
+<!-- SIP -->
+<section id="sip-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Investing</span>
+    <h2>SIP Calculator</h2>
+    <p>See how a regular investment can grow over time with the power of compounding.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field">
+        <label for="sip_type">Investment type</label>
+        <select id="sip_type"><option value="12">Monthly SIP</option><option value="4">Quarterly SIP</option><option value="1">Yearly SIP</option></select>
+      </div>
+      <div class="field" id="sip_amount_f">
+        <label for="sip_amount" id="sip_amount_lbl">Investment per instalment (₹)</label>
+        <input type="number" id="sip_amount" placeholder="Enter amount" min="0">
+        <div class="err">Please enter a valid investment amount.</div>
+      </div>
+      <div class="field" id="sip_rate_f">
+        <label for="sip_rate">Expected annual return (%)</label>
+        <input type="number" id="sip_rate" placeholder="e.g. 12" min="0" step="0.01">
+        <div class="chip-row" data-target="sip_rate" data-values="8,10,12,15,18"></div>
+        <div class="err">Please enter a valid expected return.</div>
+      </div>
+      <div class="field" id="sip_period_f">
+        <label for="sip_period">Investment period (years)</label>
+        <input type="number" id="sip_period" placeholder="e.g. 10" min="1">
+        <div class="chip-row" data-target="sip_period" data-values="1,3,5,7,10,15,20,25,30"></div>
+        <div class="err">Please enter a valid investment period.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.sip()">Calculate SIP</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('sip')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="sip_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in your SIP details and calculate to see the projected value here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the SIP calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Choose how often you invest — monthly, quarterly or yearly.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the amount you invest each time and your expected annual return.</p></div>
+      <div class="step"><div class="n">03</div><p>Set the investment period and calculate to see the growth chart.</p></div>
+    </div>
+    <h2>SIP formula</h2>
+    <div class="formula-box">FV = P × [((1 + i)ⁿ − 1) / i] × (1 + i)&nbsp;&nbsp;where P = instalment, i = periodic return, n = number of instalments</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="sip_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="sip_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#emi-calculator" data-route="emi-calculator">EMI Calculator</a>
+      <a href="#gst-calculator" data-route="gst-calculator">GST Calculator</a>
+      <a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a>
+    </div>
+  </div>
+</section>
+
+<!-- FD -->
+<section id="fd-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Savings</span>
+    <h2>FD Calculator</h2>
+    <p>Calculate the exact maturity value of your fixed deposit, with compounding.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="fd_amount_f">
+        <label for="fd_amount">Investment amount (₹)</label>
+        <input type="number" id="fd_amount" placeholder="Enter amount" min="0">
+        <div class="err">Please enter a valid investment amount.</div>
+      </div>
+      <div class="field" id="fd_rate_f">
+        <label for="fd_rate">Interest rate (% per year)</label>
+        <input type="number" id="fd_rate" placeholder="e.g. 7" min="0" step="0.01">
+        <div class="chip-row" data-target="fd_rate" data-values="5,6,6.5,7,7.5,8"></div>
+        <div class="err">Please enter a valid interest rate.</div>
+      </div>
+      <div class="field">
+        <label for="fd_tenure">Tenure</label>
+        <select id="fd_tenure">
+          <option value="0.0822">30 Days</option>
+          <option value="0.2466">90 Days</option>
+          <option value="0.4932">180 Days</option>
+          <option value="1">1 Year</option>
+          <option value="2">2 Years</option>
+          <option value="3">3 Years</option>
+          <option value="5">5 Years</option>
+          <option value="10">10 Years</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="fd_compound">Compounding</label>
+        <select id="fd_compound">
+          <option value="1">Yearly</option>
+          <option value="2">Half-Yearly</option>
+          <option value="4">Quarterly</option>
+          <option value="12">Monthly</option>
+        </select>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.fd()">Calculate FD</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('fd')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="fd_result">
+      <h4>Result</h4>
+      <div class="empty">Enter your deposit details and calculate to see the maturity value here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the FD calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the amount you plan to deposit.</p></div>
+      <div class="step"><div class="n">02</div><p>Pick the interest rate your bank offers and the tenure.</p></div>
+      <div class="step"><div class="n">03</div><p>Choose the compounding frequency and calculate.</p></div>
+    </div>
+    <h2>FD formula</h2>
+    <div class="formula-box">Maturity = P × (1 + r/n)^(n×t)&nbsp;&nbsp;where P = principal, r = annual rate, n = compounding frequency, t = tenure in years</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="fd_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="fd_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#emi-calculator" data-route="emi-calculator">EMI Calculator</a>
+      <a href="#gst-calculator" data-route="gst-calculator">GST Calculator</a>
+      <a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page hidden">
+  <div class="simple-page">
+    <h1>About MeowCalculator</h1>
+
+    <h2>Who we are</h2>
+    <p>MeowCalculator is an independent, India-focused calculator website built by a small team who got tired of hunting through slow, ad-choked, sign-up-gated tools every time we needed a quick loan, tax or investment number. We're not a bank, a financial advisory firm or a registered investment adviser — we're builders who wanted a fast, clean, trustworthy toolbox and decided to make it publicly available for free.</p>
+
+    <h2>Why this website exists</h2>
+    <p>Most people in India will, at some point, need to work out an EMI before signing a loan agreement, check how much GST applies to an invoice, project what a SIP might grow into, or figure out their in-hand salary after deductions. These are simple maths problems, but the tools available online are often cluttered with intrusive pop-ups, forced logins, or results hidden behind a "submit your phone number" wall. MeowCalculator exists to remove all of that friction: open a calculator, type your numbers, get your answer — nothing else required.</p>
+
+    <h2>Our mission</h2>
+    <p>Our mission is to make everyday financial maths accessible, transparent and free for every Indian — whether you're a student comparing education loan options, a salaried employee planning a SIP, a shopkeeper working out GST on an invoice, or a retiree estimating a pension corpus. We believe understanding the numbers behind a financial decision shouldn't require paying for software or handing over your personal data.</p>
+
+    <h2>What our calculators provide</h2>
+    <p>Every calculator on MeowCalculator is built around a few simple principles:</p>
+    <ul class="adv-list">
+      <li><strong>Instant, in-browser results</strong> — every calculation runs directly on your device using standard, published financial formulas. Nothing you type is uploaded, stored or shared with us.</li>
+      <li><strong>Clear explanations</strong> — each calculator includes the formula used, a worked real-world example, step-by-step usage instructions and answers to common questions, so you understand how the number was reached, not just what it is.</li>
+      <li><strong>No sign-up, no paywall</strong> — every tool on this site is, and will remain, completely free to use with no account required.</li>
+      <li><strong>Educational, not advisory</strong> — our calculators are designed to help you understand and estimate figures. They are not a substitute for advice from a qualified financial advisor, chartered accountant or your bank, especially for decisions involving large sums of money.</li>
+    </ul>
+
+    <p>We currently offer 20+ calculators spanning loans (EMI, home loan, car loan, personal loan, gold loan, education loan), investments and savings (SIP, FD, RD, PPF, NPS, lumpsum, mutual fund returns, retirement planning), tax and salary (GST, income tax, HRA, salary, gratuity) and everyday utilities (inflation, currency conversion, age and percentage calculators). We're actively working on adding more, based on what visitors tell us they need — see our <a href="#contact" data-route="contact">Contact page</a> if you'd like to suggest one.</p>
+
+    <p>Read our <a href="#disclaimer" data-route="disclaimer">Disclaimer</a>, <a href="#privacy-policy" data-route="privacy-policy">Privacy Policy</a> and <a href="#terms-conditions" data-route="terms-conditions">Terms &amp; Conditions</a> for more on how the site works and how we handle your data.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="page hidden">
+  <div class="simple-page">
+    <h1>Contact us</h1>
+    <p>Spotted a bug, found an incorrect result, or want a calculator we don't have yet? We'd love to hear from you — pick whichever option is easiest.</p>
+
+    <div class="contact-methods">
+      <a class="contact-method" href="https://form.typeform.com/to/ubKyx8Xv" target="_blank" rel="noopener">
+        <div class="cm-ic">📝</div>
+        <div>
+          <h3>Send us a message</h3>
+          <p>Fill out our quick contact form and we'll get back to you as soon as we can.</p>
+        </div>
+      </a>
+      <a class="contact-method" href="mailto:meowcalculator@gmail.com">
+        <div class="cm-ic">✉️</div>
+        <div>
+          <h3>Email us</h3>
+          <p>meowcalculator@gmail.com</p>
+        </div>
+      </a>
+      <a class="contact-method" href="tel:+917483746887">
+        <div class="cm-ic">📞</div>
+        <div>
+          <h3>Call / WhatsApp us</h3>
+          <p>+91 74837 46887</p>
+        </div>
+      </a>
+    </div>
+
+    <p style="margin-top:28px;color:var(--color-text-mute);font-size:.9rem;">We typically reply within 2–3 business days. For calculator bugs, please mention which calculator, the numbers you entered, and what result you expected.</p>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section id="disclaimer" class="page hidden">
+  <div class="simple-page">
+    <h1>Disclaimer</h1>
+    <p><em>Last updated: July 2026</em></p>
+    <p>The information and calculators provided on MeowCalculator ("we", "us", "our", "the Site") are for general informational and educational purposes only.</p>
+    <h2>Educational purpose only</h2>
+    <p>All content on this Site — including calculators, formulas, examples, articles and FAQs — is intended to help you understand and estimate financial figures. It is not, and should not be treated as, financial, legal, tax or investment advice of any kind.</p>
+    <h2>Results are estimates</h2>
+    <p>Every result produced by our calculators (EMI, SIP, GST, income tax, HRA, gratuity, retirement projections and all others) is an <strong>estimate</strong> based on the figures you enter and standard published formulas. Actual figures from your bank, employer, mutual fund, insurer or the Income Tax Department may differ due to rounding methods, compounding conventions, processing fees, scheme-specific rules, regulatory changes, or errors in the data you enter. Investment return figures (SIP, lumpsum, NPS, mutual funds) are projections based on assumed rates of return you provide — actual market-linked returns are never guaranteed and can be higher or lower, including negative.</p>
+    <h2>Consult a professional</h2>
+    <p>Before making any financial decision — taking a loan, investing money, filing your taxes, or claiming an exemption — please verify the numbers with your bank, a SEBI-registered investment adviser, a chartered accountant, or another qualified professional. We strongly recommend against relying solely on this Site for decisions involving significant sums of money.</p>
+    <h2>No liability</h2>
+    <p>MeowCalculator, its owners and contributors accept no liability for any loss or damage arising from reliance on information or calculations provided on this Site. Use of the Site and its calculators is entirely at your own risk.</p>
+    <p>See also our <a href="#terms-conditions" data-route="terms-conditions">Terms &amp; Conditions</a> and <a href="#privacy-policy" data-route="privacy-policy">Privacy Policy</a>.</p>
+  </div>
+</section>
+
+<!-- PRIVACY POLICY -->
+<section id="privacy-policy" class="page hidden">
+  <div class="simple-page">
+    <h1>Privacy Policy</h1>
+    <p><em>Last updated: July 2026</em></p>
+    <p>This Privacy Policy explains how MeowCalculator ("we", "us", "our") collects, uses and protects information when you visit meowcalculator.com (the "Site"). By using the Site, you agree to the practices described below.</p>
+
+    <h2>1. Information we collect</h2>
+    <p><strong>Calculator inputs.</strong> Numbers you type into our calculators (loan amounts, interest rates, salary figures, etc.) are processed entirely within your own browser using JavaScript. They are not transmitted to, or stored on, our servers.</p>
+    <p><strong>Contact form.</strong> If you use our contact form (hosted by Typeform) or email us directly, we receive the name, email address and message you choose to provide, solely to respond to your query.</p>
+    <p><strong>Automatically collected data.</strong> Like most websites, we and our third-party service providers automatically collect certain technical information when you visit, such as your IP address (partially anonymised where possible), browser type and version, device type, pages visited, time spent on the Site, and referring/exit pages.</p>
+
+    <h2>2. Cookies</h2>
+    <p>We use cookies and similar tracking technologies (such as local storage) to operate and improve the Site. Cookies are small text files stored on your device. We use them for:</p>
+    <ul class="adv-list">
+      <li><strong>Essential functionality</strong> — such as remembering your dark/light theme preference.</li>
+      <li><strong>Analytics</strong> — to understand how visitors use the Site (see below).</li>
+      <li><strong>Advertising</strong> — to serve and measure ads (see below).</li>
+    </ul>
+    <p>You can control or delete cookies through your browser settings. Disabling cookies may affect some Site functionality, though our calculators will continue to work.</p>
+
+    <h2>3. Analytics</h2>
+    <p>We may use third-party analytics services (such as Google Analytics) to understand aggregate visitor behaviour — which pages and calculators are popular, how visitors navigate the Site, and how we can improve it. These services may use cookies and similar technologies to collect and analyse information about your use of the Site. This data is generally aggregated and not used to personally identify you.</p>
+
+    <h2>4. Advertising and third-party ads (Google AdSense)</h2>
+    <p>This Site may display advertisements served by Google AdSense and other third-party advertising networks. These partners may use cookies, web beacons and similar technologies to collect information about your visits to this and other websites, in order to provide advertisements about goods and services that may interest you.</p>
+    <ul class="adv-list">
+      <li>Google's use of advertising cookies enables it and its partners to serve ads to you based on your visits to this Site and/or other sites on the Internet.</li>
+      <li>You may opt out of personalised advertising by visiting <a href="https://adssettings.google.com/authenticated" target="_blank" rel="noopener">Google Ads Settings</a>.</li>
+      <li>You may also opt out of some third-party vendor use of cookies for personalised advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info</a>.</li>
+      <li>Third-party vendors, including Google, may show our ads on sites across the Internet and use cookies to serve ads based on prior visits to this Site.</li>
+    </ul>
+    <p>We do not control the cookies placed by third-party advertisers or ad networks. Please review the relevant third party's own privacy policy for more information about their practices.</p>
+
+    <h2>5. How we use information</h2>
+    <p>We use the information described above to operate, maintain and improve the Site, respond to your enquiries, understand aggregate usage patterns, detect and prevent fraud or abuse, and display relevant advertising.</p>
+
+    <h2>6. Data sharing</h2>
+    <p>We do not sell your personal information. We may share limited information with trusted third-party service providers (such as our analytics, hosting, contact-form and advertising partners) strictly to operate the Site, and only to the extent necessary for them to perform their services.</p>
+
+    <h2>7. Data retention</h2>
+    <p>Contact form submissions and emails are retained only as long as needed to respond to and resolve your query, after which they may be deleted. Calculator inputs are never retained, since they never leave your browser.</p>
+
+    <h2>8. Children's privacy</h2>
+    <p>This Site is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
+
+    <h2>9. Your rights</h2>
+    <p>Depending on your location, you may have rights to access, correct or delete personal information we hold about you. To exercise these rights, contact us using the details below.</p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date.</p>
+
+    <h2>11. Contact us</h2>
+    <p>If you have questions about this Privacy Policy, please email us at <a href="mailto:meowcalculator@gmail.com">meowcalculator@gmail.com</a> or call <a href="tel:+917483746887">+91 74837 46887</a>.</p>
+  </div>
+</section>
+
+<!-- TERMS & CONDITIONS -->
+<section id="terms-conditions" class="page hidden">
+  <div class="simple-page">
+    <h1>Terms &amp; Conditions</h1>
+    <p><em>Last updated: July 2026</em></p>
+    <p>These Terms &amp; Conditions ("Terms") govern your use of meowcalculator.com (the "Site"). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, please do not use the Site.</p>
+
+    <h2>1. Use of the Site</h2>
+    <p>MeowCalculator provides free online calculators and related informational content relating to loans, investments, tax and everyday financial maths, for personal, non-commercial use. You may use the Site only for lawful purposes and in accordance with these Terms.</p>
+
+    <h2>2. Calculator results are estimates only</h2>
+    <p>All figures produced by our calculators — including but not limited to EMI, GST, SIP, FD, PPF, RD, lumpsum, income tax, HRA, salary, gratuity, NPS, inflation, retirement, mutual fund return, currency, age and percentage calculators — are <strong>estimates only</strong>, generated from standard published formulas and the values you enter. They do not constitute an offer, quotation, guarantee or binding calculation from any bank, financial institution, employer or government authority. Actual figures may vary. Please see our <a href="#disclaimer" data-route="disclaimer">Disclaimer</a> for more detail.</p>
+
+    <h2>3. No professional advice</h2>
+    <p>Nothing on this Site constitutes financial, investment, tax or legal advice. You should consult a qualified professional (such as a chartered accountant, SEBI-registered investment adviser or your bank) before making financial decisions.</p>
+
+    <h2>4. Intellectual property</h2>
+    <p>The Site's design, text, calculators, logos and underlying code are owned by MeowCalculator or its licensors and are protected by applicable intellectual property laws. You may not copy, reproduce, republish or create derivative works from the Site without our prior written permission, other than for personal, non-commercial use.</p>
+
+    <h2>5. Third-party links and advertising</h2>
+    <p>The Site may contain links to third-party websites and may display third-party advertisements (including via Google AdSense). We are not responsible for the content, accuracy or practices of any third-party site, and inclusion of a link or advertisement does not imply endorsement.</p>
+
+    <h2>6. Availability and changes</h2>
+    <p>We aim to keep the Site available and accurate but do not guarantee uninterrupted, error-free access. We may modify, suspend or discontinue any part of the Site, including individual calculators, at any time without notice.</p>
+
+    <h2>7. Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, MeowCalculator and its owners shall not be liable for any direct, indirect, incidental or consequential loss or damage arising from your use of, or inability to use, the Site or reliance on any calculator result or content.</p>
+
+    <h2>8. Governing law</h2>
+    <p>These Terms are governed by the laws of India, without regard to conflict-of-law principles.</p>
+
+    <h2>9. Changes to these Terms</h2>
+    <p>We may update these Terms from time to time. Continued use of the Site after changes are posted constitutes acceptance of the revised Terms.</p>
+
+    <h2>10. Contact us</h2>
+    <p>Questions about these Terms? Email <a href="mailto:meowcalculator@gmail.com">meowcalculator@gmail.com</a> or call <a href="tel:+917483746887">+91 74837 46887</a>.</p>
+  </div>
+</section>
+
+<!-- SITEMAP -->
+<section id="sitemap" class="page hidden">
+  <div class="simple-page">
+    <h1>Sitemap</h1>
+    <p>A full list of every page on MeowCalculator.</p>
+    <h2>Main pages</h2>
+    <ul class="adv-list">
+      <li><a href="#home" data-route="home">Home</a></li>
+      <li><a href="#about" data-route="about">About</a></li>
+      <li><a href="#contact" data-route="contact">Contact</a></li>
+      <li><a href="#privacy-policy" data-route="privacy-policy">Privacy Policy</a></li>
+      <li><a href="#terms-conditions" data-route="terms-conditions">Terms &amp; Conditions</a></li>
+      <li><a href="#disclaimer" data-route="disclaimer">Disclaimer</a></li>
+    </ul>
+    <h2>Loan calculators</h2>
+    <ul class="adv-list">
+      <li><a href="#emi-calculator" data-route="emi-calculator">EMI Calculator</a></li>
+      <li><a href="#car-loan-calculator" data-route="car-loan-calculator">Car Loan Calculator</a></li>
+      <li><a href="#home-loan-calculator" data-route="home-loan-calculator">Home Loan Calculator</a></li>
+      <li><a href="#gold-loan-calculator" data-route="gold-loan-calculator">Gold Loan Calculator</a></li>
+      <li><a href="#education-loan-calculator" data-route="education-loan-calculator">Education Loan Calculator</a></li>
+      <li><a href="#personal-loan-calculator" data-route="personal-loan-calculator">Personal Loan Calculator</a></li>
+    </ul>
+    <h2>Investment &amp; savings calculators</h2>
+    <ul class="adv-list">
+      <li><a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a></li>
+      <li><a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a></li>
+      <li><a href="#ppf-calculator" data-route="ppf-calculator">PPF Calculator</a></li>
+      <li><a href="#rd-calculator" data-route="rd-calculator">RD Calculator</a></li>
+      <li><a href="#lumpsum-calculator" data-route="lumpsum-calculator">Lumpsum Calculator</a></li>
+      <li><a href="#nps-calculator" data-route="nps-calculator">NPS Calculator</a></li>
+      <li><a href="#retirement-calculator" data-route="retirement-calculator">Retirement Calculator</a></li>
+      <li><a href="#mf-returns-calculator" data-route="mf-returns-calculator">Mutual Fund Returns Calculator</a></li>
+    </ul>
+    <h2>Tax &amp; salary calculators</h2>
+    <ul class="adv-list">
+      <li><a href="#gst-calculator" data-route="gst-calculator">GST Calculator</a></li>
+      <li><a href="#salary-calculator" data-route="salary-calculator">Salary Calculator</a></li>
+      <li><a href="#hra-calculator" data-route="hra-calculator">HRA Calculator</a></li>
+      <li><a href="#income-tax-calculator" data-route="income-tax-calculator">Income Tax Calculator</a></li>
+      <li><a href="#gratuity-calculator" data-route="gratuity-calculator">Gratuity Calculator</a></li>
+    </ul>
+    <h2>Everyday utility calculators</h2>
+    <ul class="adv-list">
+      <li><a href="#inflation-calculator" data-route="inflation-calculator">Inflation Calculator</a></li>
+      <li><a href="#currency-calculator" data-route="currency-calculator">Currency Converter</a></li>
+      <li><a href="#age-calculator" data-route="age-calculator">Age Calculator</a></li>
+      <li><a href="#percentage-calculator" data-route="percentage-calculator">Percentage Calculator</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 404 -->
+<section id="not-found" class="page hidden">
+  <div class="simple-page" style="text-align:center;">
+    <div style="font-size:4rem;">🐱‍👤</div>
+    <h1>404 — Page not found</h1>
+    <p>We couldn't find the page you were looking for. It may have moved, or the link might be broken.</p>
+    <div class="btn-row" style="justify-content:center;">
+      <a class="btn btn-primary" href="#home" data-route="home">Go to Homepage</a>
+      <a class="btn btn-ghost" href="#sitemap" data-route="sitemap">View Sitemap</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- PPF CALCULATOR -->
+<section id="ppf-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Savings</span>
+    <h2>PPF Calculator</h2>
+    <p>Enter your yearly PPF contribution, current interest rate and tenure to see the maturity value.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="ppf_amount_f">
+        <label for="ppf_amount">Yearly investment (₹)</label>
+        <input type="number" id="ppf_amount" placeholder="e.g. 150000" min="0">
+        <div class="chip-row" data-target="ppf_amount" data-values="500,50000,100000,150000"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="ppf_rate_f">
+        <label for="ppf_rate">Interest rate (% per year)</label>
+        <input type="number" id="ppf_rate" placeholder="e.g. 7.1" min="0" step="0.01">
+        <div class="chip-row" data-target="ppf_rate" data-values="7.1"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="ppf_years_f">
+        <label for="ppf_years">Investment period (years)</label>
+        <input type="number" id="ppf_years" placeholder="e.g. 15" min="15">
+        <div class="chip-row" data-target="ppf_years" data-values="15,20,25,30"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.ppf()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('ppf')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="ppf_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in your PPF details and calculate to see the maturity value here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the PPF Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the amount you plan to invest in your PPF account each year.</p></div>
+      <div class="step"><div class="n">02</div><p>Use the current PPF interest rate, notified quarterly by the government.</p></div>
+      <div class="step"><div class="n">03</div><p>Set your investment period (minimum 15 years) and calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Year-end balance = (Previous balance + Yearly investment) × (1 + rate/100), compounded annually for the full tenure</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="ppf_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="ppf_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a><a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a><a href="#rd-calculator" data-route="rd-calculator">RD Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- RD CALCULATOR -->
+<section id="rd-calculator" class="page">
+  <div class="calc-header">
+    <span class="tag">Savings</span>
+    <h2>RD Calculator</h2>
+    <p>Enter your monthly deposit, interest rate and tenure to see your RD maturity value.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="rd_amount_f">
+        <label for="rd_amount">Monthly deposit (₹)</label>
+        <input type="number" id="rd_amount" placeholder="e.g. 5000" min="0">
+        <div class="chip-row" data-target="rd_amount" data-values="1000,2000,5000,10000"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="rd_rate_f">
+        <label for="rd_rate">Interest rate (% per year)</label>
+        <input type="number" id="rd_rate" placeholder="e.g. 6.5" min="0" step="0.01">
+        <div class="chip-row" data-target="rd_rate" data-values="6,6.5,7,7.5"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="rd_tenure_f">
+        <label for="rd_tenure">Tenure (months)</label>
+        <input type="number" id="rd_tenure" placeholder="e.g. 24" min="0">
+        <div class="chip-row" data-target="rd_tenure" data-values="6,12,24,36,60"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.rd()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('rd')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="rd_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in your RD details and calculate to see the maturity value here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the RD Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the amount you deposit into your RD every month.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the interest rate your bank or post office offers.</p></div>
+      <div class="step"><div class="n">03</div><p>Set the tenure in months and calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Maturity = R × [((1 + i)ⁿ − 1) / i] × (1 + i)  where R = monthly deposit, i = monthly rate, n = number of months</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="rd_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="rd_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a><a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a><a href="#ppf-calculator" data-route="ppf-calculator">PPF Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- LUMPSUM CALCULATOR -->
+<section id="lumpsum-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Investing</span>
+    <h2>Lumpsum Calculator</h2>
+    <p>Enter your one-time investment amount, expected return and period to see its future value.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="lumpsum_amount_f">
+        <label for="lumpsum_amount">One-time investment (₹)</label>
+        <input type="number" id="lumpsum_amount" placeholder="e.g. 100000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="lumpsum_rate_f">
+        <label for="lumpsum_rate">Expected annual return (%)</label>
+        <input type="number" id="lumpsum_rate" placeholder="e.g. 12" min="0" step="0.01">
+        <div class="chip-row" data-target="lumpsum_rate" data-values="8,10,12,15,18"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="lumpsum_years_f">
+        <label for="lumpsum_years">Investment period (years)</label>
+        <input type="number" id="lumpsum_years" placeholder="e.g. 10" min="0">
+        <div class="chip-row" data-target="lumpsum_years" data-values="1,3,5,10,15,20"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.lumpsum()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('lumpsum')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="lumpsum_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in your investment details and calculate to see the projected value here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Lumpsum Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the amount you plan to invest in one go.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the annual return you expect the investment to compound at.</p></div>
+      <div class="step"><div class="n">03</div><p>Set the investment period and calculate to see the growth chart.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">FV = P × (1 + r/100)ⁿ  where P = invested amount, r = expected annual return, n = years</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="lumpsum_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="lumpsum_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a><a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a><a href="#ppf-calculator" data-route="ppf-calculator">PPF Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- CAR LOAN CALCULATOR -->
+<section id="car-loan-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Loans</span>
+    <h2>Car Loan Calculator</h2>
+    <p>Enter your car loan amount, interest rate and tenure to see your monthly EMI.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="car_amount_f">
+        <label for="car_amount">Car loan amount (₹)</label>
+        <input type="number" id="car_amount" placeholder="e.g. 800000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="car_rate_f">
+        <label for="car_rate">Interest rate (% per year)</label>
+        <input type="number" id="car_rate" placeholder="e.g. 9" min="0" step="0.01">
+        <div class="chip-row" data-target="car_rate" data-values="8,8.5,9,9.5,10,11"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="car_tenure_f">
+        <label for="car_tenure">Loan tenure</label>
+        <div class="two-col">
+          <input type="number" id="car_tenure" placeholder="e.g. 5" min="1">
+          <select id="car_tenure_unit"><option value="years">Years</option><option value="months">Months</option></select>
+        </div>
+        <div class="chip-row" data-target="car_tenure" data-values="1,2,3,5,7"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.car_loan()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('car-loan')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="car-loan_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in the loan details and calculate to see your results here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Car Loan Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the on-road or ex-showroom loan amount you plan to borrow.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the annual interest rate offered by your lender.</p></div>
+      <div class="step"><div class="n">03</div><p>Set the tenure in years or months and calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">EMI = P × r × (1 + r)ⁿ / ((1 + r)ⁿ − 1)  where P = principal, r = monthly interest rate, n = number of monthly instalments</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="car-loan_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="car-loan_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#emi-calculator" data-route="emi-calculator">EMI Calculator</a><a href="#home-loan-calculator" data-route="home-loan-calculator">Home Loan Calculator</a><a href="#gold-loan-calculator" data-route="gold-loan-calculator">Gold Loan Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- HOME LOAN CALCULATOR -->
+<section id="home-loan-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Loans</span>
+    <h2>Home Loan Calculator</h2>
+    <p>Enter your home loan amount, interest rate and tenure to see your monthly EMI.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="home_amount_f">
+        <label for="home_amount">Home loan amount (₹)</label>
+        <input type="number" id="home_amount" placeholder="e.g. 4000000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="home_rate_f">
+        <label for="home_rate">Interest rate (% per year)</label>
+        <input type="number" id="home_rate" placeholder="e.g. 8.5" min="0" step="0.01">
+        <div class="chip-row" data-target="home_rate" data-values="8,8.25,8.5,8.75,9,9.5"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="home_tenure_f">
+        <label for="home_tenure">Loan tenure</label>
+        <div class="two-col">
+          <input type="number" id="home_tenure" placeholder="e.g. 20" min="1">
+          <select id="home_tenure_unit"><option value="years">Years</option><option value="months">Months</option></select>
+        </div>
+        <div class="chip-row" data-target="home_tenure" data-values="10,15,20,25,30"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.home_loan()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('home-loan')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="home-loan_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in the loan details and calculate to see your results here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Home Loan Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the sanctioned home loan amount.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the annual interest rate offered by your bank or NBFC.</p></div>
+      <div class="step"><div class="n">03</div><p>Set the tenure in years or months and calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">EMI = P × r × (1 + r)ⁿ / ((1 + r)ⁿ − 1)  where P = principal, r = monthly interest rate, n = number of monthly instalments</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="home-loan_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="home-loan_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#emi-calculator" data-route="emi-calculator">EMI Calculator</a><a href="#car-loan-calculator" data-route="car-loan-calculator">Car Loan Calculator</a><a href="#gold-loan-calculator" data-route="gold-loan-calculator">Gold Loan Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- GOLD LOAN CALCULATOR -->
+<section id="gold-loan-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Loans</span>
+    <h2>Gold Loan Calculator</h2>
+    <p>Enter your gold loan amount, interest rate and tenure to see your monthly payment.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="gold_amount_f">
+        <label for="gold_amount">Loan amount (₹)</label>
+        <input type="number" id="gold_amount" placeholder="e.g. 200000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="gold_rate_f">
+        <label for="gold_rate">Interest rate (% per year)</label>
+        <input type="number" id="gold_rate" placeholder="e.g. 10" min="0" step="0.01">
+        <div class="chip-row" data-target="gold_rate" data-values="8,9,10,11,12,14"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="gold_tenure_f">
+        <label for="gold_tenure">Tenure (months)</label>
+        <input type="number" id="gold_tenure" placeholder="e.g. 12" min="0">
+        <div class="chip-row" data-target="gold_tenure" data-values="3,6,12,24,36"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.gold_loan()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('gold-loan')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="gold-loan_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in the loan details and calculate to see your results here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Gold Loan Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the loan amount sanctioned against your gold.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the annual interest rate charged by your lender.</p></div>
+      <div class="step"><div class="n">03</div><p>Set the tenure in months and calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">EMI = P × r × (1 + r)ⁿ / ((1 + r)ⁿ − 1);  Interest-only payment = P × (rate/12/100)</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="gold-loan_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="gold-loan_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#emi-calculator" data-route="emi-calculator">EMI Calculator</a><a href="#car-loan-calculator" data-route="car-loan-calculator">Car Loan Calculator</a><a href="#home-loan-calculator" data-route="home-loan-calculator">Home Loan Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- EDUCATION LOAN CALCULATOR -->
+<section id="education-loan-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Loans</span>
+    <h2>Education Loan Calculator</h2>
+    <p>Enter your education loan amount, rate, moratorium period and repayment tenure.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="edu_amount_f">
+        <label for="edu_amount">Loan amount (₹)</label>
+        <input type="number" id="edu_amount" placeholder="e.g. 1000000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="edu_rate_f">
+        <label for="edu_rate">Interest rate (% per year)</label>
+        <input type="number" id="edu_rate" placeholder="e.g. 10.5" min="0" step="0.01">
+        <div class="chip-row" data-target="edu_rate" data-values="8,9,10,11,12"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="edu_moratorium_f">
+        <label for="edu_moratorium">Moratorium period (months)</label>
+        <input type="number" id="edu_moratorium" placeholder="e.g. 24" min="0">
+        <div class="chip-row" data-target="edu_moratorium" data-values="0,12,24,36"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="edu_tenure_f">
+        <label for="edu_tenure">Repayment tenure (years)</label>
+        <input type="number" id="edu_tenure" placeholder="e.g. 10" min="0">
+        <div class="chip-row" data-target="edu_tenure" data-values="5,7,10,15"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.education_loan()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('education-loan')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="education-loan_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in the loan details and calculate to see your results here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Education Loan Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the loan amount disbursed for your course.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the moratorium period — usually your course duration plus a grace period, during which you don't repay.</p></div>
+      <div class="step"><div class="n">03</div><p>Enter the repayment tenure over which EMIs will run once the moratorium ends.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Interest during moratorium = P × rate/100/12 × months; EMI is then calculated on (Principal + accrued interest) over the repayment tenure</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="education-loan_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="education-loan_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#emi-calculator" data-route="emi-calculator">EMI Calculator</a><a href="#car-loan-calculator" data-route="car-loan-calculator">Car Loan Calculator</a><a href="#home-loan-calculator" data-route="home-loan-calculator">Home Loan Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- PERSONAL LOAN CALCULATOR -->
+<section id="personal-loan-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Loans</span>
+    <h2>Personal Loan Calculator</h2>
+    <p>Enter your personal loan amount, interest rate and tenure to see your monthly EMI.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="personal_amount_f">
+        <label for="personal_amount">Loan amount (₹)</label>
+        <input type="number" id="personal_amount" placeholder="e.g. 300000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="personal_rate_f">
+        <label for="personal_rate">Interest rate (% per year)</label>
+        <input type="number" id="personal_rate" placeholder="e.g. 14" min="0" step="0.01">
+        <div class="chip-row" data-target="personal_rate" data-values="10,12,14,16,18,22"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="personal_tenure_f">
+        <label for="personal_tenure">Tenure (months)</label>
+        <input type="number" id="personal_tenure" placeholder="e.g. 36" min="0">
+        <div class="chip-row" data-target="personal_tenure" data-values="12,24,36,48,60"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.personal_loan()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('personal-loan')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="personal-loan_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in the loan details and calculate to see your results here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Personal Loan Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the personal loan amount you plan to borrow.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the annual interest rate offered by your lender.</p></div>
+      <div class="step"><div class="n">03</div><p>Set the tenure in months and calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">EMI = P × r × (1 + r)ⁿ / ((1 + r)ⁿ − 1)  where P = principal, r = monthly interest rate, n = number of monthly instalments</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="personal-loan_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="personal-loan_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#emi-calculator" data-route="emi-calculator">EMI Calculator</a><a href="#car-loan-calculator" data-route="car-loan-calculator">Car Loan Calculator</a><a href="#home-loan-calculator" data-route="home-loan-calculator">Home Loan Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- SALARY CALCULATOR -->
+<section id="salary-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Salary</span>
+    <h2>Salary Calculator</h2>
+    <p>Enter your annual CTC to see an estimated monthly in-hand salary breakdown.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="salary_ctc_f">
+        <label for="salary_ctc">Annual CTC (₹)</label>
+        <input type="number" id="salary_ctc" placeholder="e.g. 1200000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="salary_basic_pct_f">
+        <label for="salary_basic_pct">Basic salary (% of CTC)</label>
+        <input type="number" id="salary_basic_pct" placeholder="e.g. 50" min="0">
+        <div class="chip-row" data-target="salary_basic_pct" data-values="40,45,50"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field">
+        <label for="salary_ptax">Professional tax</label>
+        <select id="salary_ptax"><option value="2400">₹2,400/year (common slab)</option><option value="0">Not applicable</option></select>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.salary()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('salary')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="salary_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in your CTC details and calculate to see your take-home breakdown here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Salary Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter your total annual CTC (cost to company) as stated in your offer letter.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter what share of your CTC is Basic salary — commonly 40–50%.</p></div>
+      <div class="step"><div class="n">03</div><p>Choose whether professional tax applies in your state and calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Basic = CTC × basic%; Employer &amp; Employee PF = 12% of Basic each; Gratuity accrual ≈ 4.81% of Basic; Take-home = CTC − Employer PF − Gratuity − Employee PF − Professional tax</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="salary_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="salary_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#gst-calculator" data-route="gst-calculator">GST Calculator</a><a href="#hra-calculator" data-route="hra-calculator">HRA Calculator</a><a href="#income-tax-calculator" data-route="income-tax-calculator">Income Tax Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- HRA CALCULATOR -->
+<section id="hra-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Salary</span>
+    <h2>HRA Calculator</h2>
+    <p>Enter your basic salary, HRA received and rent paid to see your exempt HRA.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="hra_basic_f">
+        <label for="hra_basic">Basic salary + DA (monthly, ₹)</label>
+        <input type="number" id="hra_basic" placeholder="e.g. 40000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="hra_received_f">
+        <label for="hra_received">HRA received (monthly, ₹)</label>
+        <input type="number" id="hra_received" placeholder="e.g. 20000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="hra_rent_f">
+        <label for="hra_rent">Rent paid (monthly, ₹)</label>
+        <input type="number" id="hra_rent" placeholder="e.g. 18000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field">
+        <label for="hra_city">City type</label>
+        <select id="hra_city"><option value="metro">Metro (Delhi, Mumbai, Kolkata, Chennai)</option><option value="nonmetro">Non-metro</option></select>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.hra()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('hra')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="hra_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in your salary and rent details and calculate to see your exempt HRA here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the HRA Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter your monthly Basic salary plus Dearness Allowance (DA), if any.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the HRA you actually receive and the rent you actually pay each month.</p></div>
+      <div class="step"><div class="n">03</div><p>Select whether you live in a metro city and calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Exempt HRA = minimum of: (a) HRA received, (b) Rent paid − 10% of Basic, (c) 50% of Basic (metro) or 40% of Basic (non-metro)</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="hra_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="hra_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#gst-calculator" data-route="gst-calculator">GST Calculator</a><a href="#salary-calculator" data-route="salary-calculator">Salary Calculator</a><a href="#income-tax-calculator" data-route="income-tax-calculator">Income Tax Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- INCOME TAX CALCULATOR -->
+<section id="income-tax-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Tax</span>
+    <h2>Income Tax Calculator</h2>
+    <p>Enter your annual gross income and pick a regime to estimate your tax liability for FY 2025-26 (AY 2026-27).</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field">
+        <label for="tax_regime">Tax regime</label>
+        <select id="tax_regime"><option value="new">New regime (default)</option><option value="old">Old regime</option></select>
+      </div>
+      <div class="field" id="tax_income_f">
+        <label for="tax_income">Annual gross income (₹)</label>
+        <input type="number" id="tax_income" placeholder="e.g. 1200000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.income_tax()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('income-tax')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="income-tax_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in your income details and calculate to see your estimated tax here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Income Tax Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Choose the new regime (the current default) or the old regime.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter your total annual gross income from salary and other sources.</p></div>
+      <div class="step"><div class="n">03</div><p>Calculate to see your taxable income, rebate and total tax payable.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">New regime slabs (FY25-26): 0-4L Nil · 4-8L 5% · 8-12L 10% · 12-16L 15% · 16-20L 20% · 20-24L 25% · above 24L 30%, plus ₹75,000 standard deduction and a rebate up to ₹60,000 for taxable income ≤ ₹12L</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="income-tax_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="income-tax_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#gst-calculator" data-route="gst-calculator">GST Calculator</a><a href="#salary-calculator" data-route="salary-calculator">Salary Calculator</a><a href="#hra-calculator" data-route="hra-calculator">HRA Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- GRATUITY CALCULATOR -->
+<section id="gratuity-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Salary</span>
+    <h2>Gratuity Calculator</h2>
+    <p>Enter your last drawn basic + DA and years of service to estimate your gratuity.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="gratuity_basic_f">
+        <label for="gratuity_basic">Last drawn Basic + DA (monthly, ₹)</label>
+        <input type="number" id="gratuity_basic" placeholder="e.g. 45000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="gratuity_years_f">
+        <label for="gratuity_years">Years of service</label>
+        <input type="number" id="gratuity_years" placeholder="e.g. 8.5" min="0" step="0.1">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.gratuity()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('gratuity')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="gratuity_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in your service details and calculate to see your gratuity amount here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Gratuity Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter your last drawn monthly Basic salary plus Dearness Allowance.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter your total years of service (fractions of a year are rounded per the Act).</p></div>
+      <div class="step"><div class="n">03</div><p>Calculate to see your estimated gratuity payout.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Gratuity = (Last drawn Basic + DA) × 15/26 × Years of service, subject to a statutory cap of ₹20,00,000</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="gratuity_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="gratuity_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#gst-calculator" data-route="gst-calculator">GST Calculator</a><a href="#salary-calculator" data-route="salary-calculator">Salary Calculator</a><a href="#hra-calculator" data-route="hra-calculator">HRA Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- NPS CALCULATOR -->
+<section id="nps-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Retirement</span>
+    <h2>NPS Calculator</h2>
+    <p>Enter your monthly NPS contribution, expected return and years to retirement.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="nps_amount_f">
+        <label for="nps_amount">Monthly contribution (₹)</label>
+        <input type="number" id="nps_amount" placeholder="e.g. 5000" min="0">
+        <div class="chip-row" data-target="nps_amount" data-values="1000,2000,5000,10000"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="nps_rate_f">
+        <label for="nps_rate">Expected annual return (%)</label>
+        <input type="number" id="nps_rate" placeholder="e.g. 10" min="0" step="0.01">
+        <div class="chip-row" data-target="nps_rate" data-values="8,10,12"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="nps_years_f">
+        <label for="nps_years">Years to retirement</label>
+        <input type="number" id="nps_years" placeholder="e.g. 25" min="0">
+        <div class="chip-row" data-target="nps_years" data-values="10,15,20,25,30"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="nps_annuity_pct_f">
+        <label for="nps_annuity_pct">Annuity purchase (% of corpus)</label>
+        <input type="number" id="nps_annuity_pct" placeholder="e.g. 40" min="40">
+        <div class="chip-row" data-target="nps_annuity_pct" data-values="40,50,60"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="nps_annuity_rate_f">
+        <label for="nps_annuity_rate">Assumed annuity rate (% per year)</label>
+        <input type="number" id="nps_annuity_rate" placeholder="e.g. 6" min="0" step="0.01">
+        <div class="chip-row" data-target="nps_annuity_rate" data-values="5,6,7"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.nps()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('nps')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="nps_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in your NPS details and calculate to see your projected corpus here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the NPS Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter your monthly NPS contribution and expected annual return.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the number of years remaining until you retire (exit age 60 by default).</p></div>
+      <div class="step"><div class="n">03</div><p>Set how much of your corpus you'll use to buy an annuity (minimum 40% is mandatory) and calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Corpus = P × [((1 + i)ⁿ − 1) / i] × (1 + i); Monthly pension ≈ (Corpus × Annuity%) × Annuity rate / 12</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="nps_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="nps_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a><a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a><a href="#ppf-calculator" data-route="ppf-calculator">PPF Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- INFLATION CALCULATOR -->
+<section id="inflation-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Utility</span>
+    <h2>Inflation Calculator</h2>
+    <p>Enter an amount, expected inflation rate and number of years to see its future equivalent cost.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="inflation_amount_f">
+        <label for="inflation_amount">Today's amount (₹)</label>
+        <input type="number" id="inflation_amount" placeholder="e.g. 100000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="inflation_rate_f">
+        <label for="inflation_rate">Expected inflation rate (% per year)</label>
+        <input type="number" id="inflation_rate" placeholder="e.g. 6" min="0" step="0.01">
+        <div class="chip-row" data-target="inflation_rate" data-values="5,6,7,8"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="inflation_years_f">
+        <label for="inflation_years">Number of years</label>
+        <input type="number" id="inflation_years" placeholder="e.g. 10" min="0">
+        <div class="chip-row" data-target="inflation_years" data-values="5,10,15,20,25"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.inflation()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('inflation')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="inflation_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in the details and calculate to see the future value here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Inflation Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter an amount in today's rupees.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter the inflation rate you expect over the period.</p></div>
+      <div class="step"><div class="n">03</div><p>Set the number of years and calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Future cost = Amount × (1 + inflation rate/100)ⁿ  where n = number of years</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="inflation_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="inflation_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#currency-calculator" data-route="currency-calculator">Currency Converter</a><a href="#age-calculator" data-route="age-calculator">Age Calculator</a><a href="#percentage-calculator" data-route="percentage-calculator">Percentage Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- RETIREMENT CALCULATOR -->
+<section id="retirement-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Planning</span>
+    <h2>Retirement Calculator</h2>
+    <p>Enter your age details, expenses and return assumptions to estimate your retirement corpus.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="retire_current_age_f">
+        <label for="retire_current_age">Current age</label>
+        <input type="number" id="retire_current_age" placeholder="e.g. 30" min="0">
+        <div class="chip-row" data-target="retire_current_age" data-values="25,30,35,40"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="retire_age_f">
+        <label for="retire_age">Retirement age</label>
+        <input type="number" id="retire_age" placeholder="e.g. 60" min="0">
+        <div class="chip-row" data-target="retire_age" data-values="55,58,60,65"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="retire_life_exp_f">
+        <label for="retire_life_exp">Life expectancy (age)</label>
+        <input type="number" id="retire_life_exp" placeholder="e.g. 85" min="0">
+        <div class="chip-row" data-target="retire_life_exp" data-values="80,85,90"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="retire_expense_f">
+        <label for="retire_expense">Current monthly expense (₹)</label>
+        <input type="number" id="retire_expense" placeholder="e.g. 50000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="retire_inflation_f">
+        <label for="retire_inflation">Inflation rate (% per year)</label>
+        <input type="number" id="retire_inflation" placeholder="e.g. 6" min="0" step="0.01">
+        <div class="chip-row" data-target="retire_inflation" data-values="5,6,7"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="retire_pre_rate_f">
+        <label for="retire_pre_rate">Expected return before retirement (%)</label>
+        <input type="number" id="retire_pre_rate" placeholder="e.g. 12" min="0" step="0.01">
+        <div class="chip-row" data-target="retire_pre_rate" data-values="10,12,14"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="retire_post_rate_f">
+        <label for="retire_post_rate">Expected return after retirement (%)</label>
+        <input type="number" id="retire_post_rate" placeholder="e.g. 7" min="0" step="0.01">
+        <div class="chip-row" data-target="retire_post_rate" data-values="6,7,8"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.retirement()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('retirement')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="retirement_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in your details and calculate to see your retirement plan here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Retirement Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter your current age, planned retirement age and expected life expectancy.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter your current monthly expenses and the inflation rate you expect.</p></div>
+      <div class="step"><div class="n">03</div><p>Enter your expected investment returns before and after retirement, then calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Retirement corpus = Future annual expense × growing-annuity factor over retirement years; Required monthly SIP = Corpus ÷ SIP future-value factor over years to retirement</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="retirement_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="retirement_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a><a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a><a href="#ppf-calculator" data-route="ppf-calculator">PPF Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- MUTUAL FUND RETURNS CALCULATOR -->
+<section id="mf-returns-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Investing</span>
+    <h2>Mutual Fund Returns Calculator</h2>
+    <p>Enter your initial investment, current value and holding period to see your returns.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="mf_initial_f">
+        <label for="mf_initial">Initial investment (₹)</label>
+        <input type="number" id="mf_initial" placeholder="e.g. 100000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="mf_current_f">
+        <label for="mf_current">Current value (₹)</label>
+        <input type="number" id="mf_current" placeholder="e.g. 165000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="mf_years_f">
+        <label for="mf_years">Holding period (years)</label>
+        <input type="number" id="mf_years" placeholder="e.g. 3" min="0" step="0.1">
+        <div class="chip-row" data-target="mf_years" data-values="1,2,3,5,10"></div>
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.mf_returns()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('mf-returns')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="mf-returns_result">
+      <h4>Result</h4>
+      <div class="empty">Fill in your investment details and calculate to see your returns here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Mutual Fund Returns Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the amount you originally invested.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter what the investment is worth today.</p></div>
+      <div class="step"><div class="n">03</div><p>Enter how long you've held the investment and calculate.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Absolute return = (Current value − Initial investment) / Initial investment × 100; CAGR = ((Current value / Initial investment)^(1/years) − 1) × 100</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="mf-returns_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="mf-returns_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a><a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a><a href="#ppf-calculator" data-route="ppf-calculator">PPF Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- CURRENCY CONVERTER -->
+<section id="currency-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Utility</span>
+    <h2>Currency Converter</h2>
+    <p>Enter an amount and choose currencies to convert — rates are fetched live where possible.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="currency_amount_f">
+        <label for="currency_amount">Amount</label>
+        <input type="number" id="currency_amount" placeholder="e.g. 1000" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field">
+        <label for="currency_from">From currency</label>
+        <select id="currency_from"><option value="INR">INR — Indian Rupee</option><option value="USD">USD — US Dollar</option><option value="EUR">EUR — Euro</option><option value="GBP">GBP — British Pound</option><option value="AED">AED — UAE Dirham</option><option value="SGD">SGD — Singapore Dollar</option><option value="AUD">AUD — Australian Dollar</option><option value="JPY">JPY — Japanese Yen</option><option value="CAD">CAD — Canadian Dollar</option></select>
+      </div>
+      <div class="field">
+        <label for="currency_to">To currency</label>
+        <select id="currency_to"><option value="USD">USD — US Dollar</option><option value="INR">INR — Indian Rupee</option><option value="EUR">EUR — Euro</option><option value="GBP">GBP — British Pound</option><option value="AED">AED — UAE Dirham</option><option value="SGD">SGD — Singapore Dollar</option><option value="AUD">AUD — Australian Dollar</option><option value="JPY">JPY — Japanese Yen</option><option value="CAD">CAD — Canadian Dollar</option></select>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.currency()">Convert</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('currency')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="currency_result">
+      <h4>Result</h4>
+      <div class="empty">Enter an amount and currencies, then convert to see the result here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Currency Converter</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter the amount you want to convert.</p></div>
+      <div class="step"><div class="n">02</div><p>Choose the currency you're converting from and to.</p></div>
+      <div class="step"><div class="n">03</div><p>Click Convert — the current exchange rate is fetched live.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Converted amount = Amount × (exchange rate from → to), fetched live from a public exchange-rate API</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="currency_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="currency_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#inflation-calculator" data-route="inflation-calculator">Inflation Calculator</a><a href="#age-calculator" data-route="age-calculator">Age Calculator</a><a href="#percentage-calculator" data-route="percentage-calculator">Percentage Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- AGE CALCULATOR -->
+<section id="age-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Utility</span>
+    <h2>Age Calculator</h2>
+    <p>Enter your date of birth to see your exact age and countdown to your next birthday.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field" id="age_dob_f">
+        <label for="age_dob">Date of birth</label>
+        <input type="date" id="age_dob">
+        <div class="err">Please enter a valid date.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.age()">Calculate Age</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('age')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="age_result">
+      <h4>Result</h4>
+      <div class="empty">Enter your date of birth and calculate to see your exact age here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Age Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Enter your date of birth using the date picker.</p></div>
+      <div class="step"><div class="n">02</div><p>Click Calculate Age.</p></div>
+      <div class="step"><div class="n">03</div><p>See your exact age and the countdown to your next birthday.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">Age is calculated by taking the calendar difference between today's date and your date of birth, carrying over days and months as needed.</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="age_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="age_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#inflation-calculator" data-route="inflation-calculator">Inflation Calculator</a><a href="#currency-calculator" data-route="currency-calculator">Currency Converter</a><a href="#percentage-calculator" data-route="percentage-calculator">Percentage Calculator</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- PERCENTAGE CALCULATOR -->
+<section id="percentage-calculator" class="page hidden">
+  <div class="calc-header">
+    <span class="tag">Utility</span>
+    <h2>Percentage Calculator</h2>
+    <p>Choose what you want to calculate and enter your two values.</p>
+  </div>
+  <div class="calc-layout">
+    <div class="panel">
+      <div class="field">
+        <label for="pct_mode">What do you want to calculate?</label>
+        <select id="pct_mode"><option value="of">X% of Y</option><option value="iswhat">X is what % of Y</option><option value="change">% change from X to Y</option></select>
+      </div>
+      <div class="field" id="pct_x_f">
+        <label for="pct_x">Value X</label>
+        <input type="number" id="pct_x" placeholder="e.g. 20" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="field" id="pct_y_f">
+        <label for="pct_y">Value Y</label>
+        <input type="number" id="pct_y" placeholder="e.g. 500" min="0">
+        <div class="err">Please enter a valid value.</div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="Calc.percentage()">Calculate</button>
+        <button class="btn btn-ghost" onclick="Calc.reset('percentage')">Reset</button>
+      </div>
+    </div>
+    <div class="ledger" id="percentage_result">
+      <h4>Result</h4>
+      <div class="empty">Choose a mode, enter your values and calculate to see the result here.</div>
+    </div>
+  </div>
+  <div class="info-block">
+    <h2>How to use the Percentage Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p>Choose the type of percentage calculation you need.</p></div>
+      <div class="step"><div class="n">02</div><p>Enter your two values, X and Y.</p></div>
+      <div class="step"><div class="n">03</div><p>Calculate to see the result.</p></div>
+    </div>
+    <h2>Formula</h2>
+    <div class="formula-box">X% of Y = (X/100)×Y  ·  X is what % of Y = (X/Y)×100  ·  % change from X to Y = ((Y−X)/X)×100</div>
+    <h2>Real-world example</h2>
+    <div class="example" id="percentage_example"></div>
+    <h2>Frequently asked questions</h2>
+    <div class="faq" id="percentage_faq"></div>
+    <div class="related">
+      <span style="color:var(--color-text-mute);font-size:.85rem;align-self:center;">Also try:</span>
+      <a href="#inflation-calculator" data-route="inflation-calculator">Inflation Calculator</a><a href="#currency-calculator" data-route="currency-calculator">Currency Converter</a><a href="#age-calculator" data-route="age-calculator">Age Calculator</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-sitemap container">
+    <div class="footer-col">
+      <h5>Loan Calculators</h5>
+      <a href="#emi-calculator" data-route="emi-calculator">EMI Calculator</a>
+      <a href="#home-loan-calculator" data-route="home-loan-calculator">Home Loan Calculator</a>
+      <a href="#car-loan-calculator" data-route="car-loan-calculator">Car Loan Calculator</a>
+      <a href="#gold-loan-calculator" data-route="gold-loan-calculator">Gold Loan Calculator</a>
+      <a href="#education-loan-calculator" data-route="education-loan-calculator">Education Loan Calculator</a>
+      <a href="#personal-loan-calculator" data-route="personal-loan-calculator">Personal Loan Calculator</a>
+    </div>
+    <div class="footer-col">
+      <h5>Investment & Savings</h5>
+      <a href="#sip-calculator" data-route="sip-calculator">SIP Calculator</a>
+      <a href="#fd-calculator" data-route="fd-calculator">FD Calculator</a>
+      <a href="#ppf-calculator" data-route="ppf-calculator">PPF Calculator</a>
+      <a href="#rd-calculator" data-route="rd-calculator">RD Calculator</a>
+      <a href="#lumpsum-calculator" data-route="lumpsum-calculator">Lumpsum Calculator</a>
+      <a href="#nps-calculator" data-route="nps-calculator">NPS Calculator</a>
+      <a href="#retirement-calculator" data-route="retirement-calculator">Retirement Calculator</a>
+      <a href="#mf-returns-calculator" data-route="mf-returns-calculator">Mutual Fund Returns Calculator</a>
+    </div>
+    <div class="footer-col">
+      <h5>Tax & Salary</h5>
+      <a href="#gst-calculator" data-route="gst-calculator">GST Calculator</a>
+      <a href="#salary-calculator" data-route="salary-calculator">Salary Calculator</a>
+      <a href="#hra-calculator" data-route="hra-calculator">HRA Calculator</a>
+      <a href="#income-tax-calculator" data-route="income-tax-calculator">Income Tax Calculator</a>
+      <a href="#gratuity-calculator" data-route="gratuity-calculator">Gratuity Calculator</a>
+    </div>
+    <div class="footer-col">
+      <h5>Everyday Utility</h5>
+      <a href="#inflation-calculator" data-route="inflation-calculator">Inflation Calculator</a>
+      <a href="#currency-calculator" data-route="currency-calculator">Currency Converter</a>
+      <a href="#age-calculator" data-route="age-calculator">Age Calculator</a>
+      <a href="#percentage-calculator" data-route="percentage-calculator">Percentage Calculator</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#home" data-route="home">Home</a>
+      <a href="#about" data-route="about">About</a>
+      <a href="#contact" data-route="contact">Contact</a>
+      <a href="#privacy-policy" data-route="privacy-policy">Privacy Policy</a>
+      <a href="#terms-conditions" data-route="terms-conditions">Terms &amp; Conditions</a>
+      <a href="#disclaimer" data-route="disclaimer">Disclaimer</a>
+      <a href="#sitemap" data-route="sitemap">Sitemap</a>
+    </div>
+  </div>
+  <div class="footer-contact container">
+    <span>✉️ <a href="mailto:meowcalculator@gmail.com">meowcalculator@gmail.com</a></span>
+    <span>📞 <a href="tel:+917483746887">+91 74837 46887</a></span>
+  </div>
+  <div class="footer-bottom">🐱 © 2026 MeowCalculator · Built for quick, accurate financial math. Results are estimates — please confirm with your bank or CA before making decisions. All calculators are for educational purposes only; see our <a href="#disclaimer" data-route="disclaimer">Disclaimer</a>.</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="../script.min.js"></script>
+</body>
+</html>
