@@ -81,7 +81,7 @@ function updateSchema(target){
       "name": (TITLES[target]||'').split(' — ')[0],
       "applicationCategory":"FinanceApplication",
       "operatingSystem":"Any",
-      "url": 'https://www.meowcalculator.com/' + target,
+      "url": 'https://www.meowcalculator.com/' + (target === 'home' ? '' : target + '/'),
       "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}
     });
   }
@@ -122,7 +122,7 @@ function route(){
   document.getElementById(target).classList.remove('hidden');
 
   // Upgrade legacy hash URLs (or the bare "/") to a clean, bookmarkable path.
-  const cleanPath = target === 'home' ? '/' : '/' + target;
+  const cleanPath = target === 'home' ? '/' : '/' + target + '/';
   if(location.pathname !== cleanPath || location.hash){
     history.replaceState({route: target}, '', cleanPath);
   }
@@ -149,7 +149,7 @@ document.addEventListener('click', (e)=>{
   if(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; // let "open in new tab" etc. work normally
   e.preventDefault();
   const target = link.dataset.route;
-  const cleanPath = target === 'home' ? '/' : '/' + target;
+  const cleanPath = target === 'home' ? '/' : '/' + target + '/';
   if(location.pathname !== cleanPath){
     history.pushState({route: target}, '', cleanPath);
   }
